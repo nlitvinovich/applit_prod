@@ -1,4 +1,1 @@
 telethon
-openpyxl
-pandas
-PyGithub
