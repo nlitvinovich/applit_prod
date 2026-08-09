@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>NLAppleLab CSV Generator</title>
+</head>
+
+<body>
+
+<h2>Генератор CSV для NLAppleLab</h2>
+
+<textarea id="input" style="width:100%;height:300px;"></textarea>
+<br><br>
+
+<button id="btn-generate">Сгенерировать CSV</button>
+<button id="btn-copy">Скопировать CSV</button>
+
+<pre id="output" style="white-space:pre;margin-top:20px;background:#eee;padding:10px;"></pre>
+
+<script>
+// --------------------
+// Вытаскиваем текст из HTML (работает даже с DOCX)
+// --------------------
+function extractText(html) {
+  let text = html.replace(/<[^>]+>/g, '\n');   // удаляем теги
+  text = text.replace(/\n+/g, '\n');          // чистим переносы
+  text = text.replace(/[\u{1F300}-\u{1FAFF}]/gu, ''); // удаляем эмодзи
+  return text;
+}
+
+// --------------------
+// Генерация CSV
+// --------------------
+function generateCSV() {
+  const html = document.getElementById('input').value;
+
+  const rawText = extractText(html);
+  const lines = rawText.split('\n').map(l => l.trim());
+
+  // авто‑таймстамп
+  const now = new Date();
+  const dd = String(now.getDate()).padStart(2, '0');
+  const mm = String(now.getMonth() + 1).padStart(2, '0');
+  const yyyy = now.getFullYear();
+  const hh = String(now.getHours()).padStart(2, '0');
+  const min = String(now.getMinutes()).padStart(2, '0');
+
+  let csv = `last_update,${dd}.${mm}.${yyyy} ${hh}:${min}\n`;
+  csv += "id,model,price\n";
+
+  let id = 1;
+
+  lines.forEach(line => {
+    if (!line) return;
+
+    if (!line.match(/\d+\s*BYN/i)) return; // ищем строки с ценой
+
+    line = line.replace(/—/g, '-').replace(/–/g, '-');
+    line = line.replace(/BYN/gi, '').trim();
+
+    const parts = line.split('-');
+    if (parts.length < 2) return;
+
+    const model = parts[0].trim();
+    let price = parseInt(parts[1].trim(), 10);
+    if (isNaN(price)) return;
+
+    price = Math.round(price / 10) * 10;
+
+    csv += `${id},${model},${price}\n`;
+    id++;
+  });
+
+  document.getElementById('output').textContent = csv;
+}
+
+// --------------------
+// Скопировать CSV в буфер
+// --------------------
+function copyCSV() {
+  const text = document.getElementById('output').textContent;
+  if (!text.trim()) return;
+
+  navigator.clipboard.writeText(text).then(() => {
+    alert("CSV скопирован в буфер обмена!");
+  });
+}
+
+// --------------------
+// Привязка кнопок
+// --------------------
+document.getElementById('btn-generate').onclick = generateCSV;
+document.getElementById('btn-copy').onclick = copyCSV;
+</script>
+
+</body>
+</html>
