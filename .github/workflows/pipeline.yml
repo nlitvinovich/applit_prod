@@ -2,8 +2,11 @@ name: Auto Update Products
 
 on:
   schedule:
-    - cron: "0 * * * *"   # запуск каждый час
-  workflow_dispatch:       # ручной запуск
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write   # ← ДАЁТ ПРАВО PUSH ДЛЯ GITHUB ACTIONS
 
 jobs:
   run-pipeline:
@@ -11,17 +14,19 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}   # ← важно
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"   # ← Node 24, без deprecated
 
       - name: Install Python dependencies
         run: pip install telethon
@@ -31,7 +36,7 @@ jobs:
           API_ID: ${{ secrets.API_ID }}
           API_HASH: ${{ secrets.API_HASH }}
           SESSION_B64: ${{ secrets.SESSION_B64 }}
-          TG_CHANNEL: ${{ secrets.TG_CHANNEL }}   # invite-link канала
+          TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
         run: python pipeline.py
 
       - name: Run generator
@@ -42,3 +47,5 @@ jobs:
         with:
           commit_message: "Auto-update products.csv"
           file_pattern: products.csv
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
