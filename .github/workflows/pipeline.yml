@@ -3,7 +3,7 @@ name: Telegram → CSV Generator
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *" # каждые 6 часов
+    - cron: "0 */6 * * *"
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
         run: python pipeline.py
 
       - name: Upload input.txt
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: telegram-input
           path: admin/input.txt
@@ -44,7 +44,7 @@ jobs:
         run: node admin/generator.js
 
       - name: Upload products.csv
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: products-csv
           path: products.csv
