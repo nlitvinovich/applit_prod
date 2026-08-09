@@ -1,97 +1,97 @@
-last_update,09.08.2026 15:03
+last_update,09.08.2026 15:05
 id,model,price
 1,SE3 40 Midnight 2025,820
-2,SE3 40 Starlight 2025,844
-3,SE3 44 Midnight 2025,888
-4,SE3 44 Starlight 2025,932
-5,S11 42 Jet Black,1 095
-6,S11 42 Space Gray,1 095
+2,SE3 40 Starlight 2025,840
+3,SE3 44 Midnight 2025,890
+4,SE3 44 Starlight 2025,930
+5,S11 42 Jet Black,1 100
+6,S11 42 Space Gray,1 100
 7,S11 42 Rose Gold,1 140
-8,S11 46 Jet Black,1 184
-9,S11 46 Space Gray,1 154
-10,S11 46 Rose Gold,1 154
-11,iPad 11 128GB WiFi blue,1 394
+8,S11 46 Jet Black,1 180
+9,S11 46 Space Gray,1 150
+10,S11 46 Rose Gold,1 150
+11,iPad 11 128GB WiFi blue,1 390
 12,iPad 11 128GB WiFi silver,1 430
-13,iPad 11 128GB WiFi pink,1 465
-14,iPad 11 128GB WiFi yellow,1 442
-15,iPad 11 256GB WiFi blue,1 672
-16,iPad 11 256GB WiFi silver,1 746
-17,iPad 11 256GB WiFi yellow,1 746
-18,iPad 11 256GB WiFi pink,1 672
+13,iPad 11 128GB WiFi pink,1 470
+14,iPad 11 128GB WiFi yellow,1 440
+15,iPad 11 256GB WiFi blue,1 670
+16,iPad 11 256GB WiFi silver,1 750
+17,iPad 11 256GB WiFi yellow,1 750
+18,iPad 11 256GB WiFi pink,1 670
 19,iPad Air 11 (M4) 2026 128 Space Gray,2 250
-20,iPad Air 11 (M4) 2026 128 Purple,2 279
-21,iPad Air 11 (M4) 2026 128 blue,2 176
-22,iPad Air 11 (M4) 2026 128 Starlight,2 279
+20,iPad Air 11 (M4) 2026 128 Purple,2 280
+21,iPad Air 11 (M4) 2026 128 blue,2 180
+22,iPad Air 11 (M4) 2026 128 Starlight,2 280
 23,iPad Air 11 (M4) 2026 256 Space Gray,2 620
 24,iPad Air 11 (M4) 2026 256 Purple,2 620
 25,iPad Air 11 (M4) 2026 256 Blue,2 620
-26,iPad Air 11 (M4) 2026 256 Starlight,2 649
-27,iPad Air 13 (M4) 2026 128 Space Gray,2 664
+26,iPad Air 11 (M4) 2026 256 Starlight,2 650
+27,iPad Air 13 (M4) 2026 128 Space Gray,2 660
 28,iPad Air 13 (M4) 2026 128 starlight,2 620
 29,iPad Air 13 (M4) 2026 128 Blue,2 590
-30,iPad Air 13 (M4) 2026 128 Purple,2 605
-31,17 pro 256 orange esim,3 315
-32,17 pro 256 blue esim,3 478
-33,17 Pro 256 Silver eSim,3 478
-34,17 pro 256 orange sim+esim,3 567
-35,17 pro 256 blue sim+esim,3 626
-36,17 pro 256 silver sim+esim,3 656
-37,17 pro 512 orange esim,3 981
-38,17 pro 512 blue esim,4 055
-39,17 pro 512 silver esim,4 055
-40,17 pro 512 orange sim+esim,4 188
-41,17 pro 512 blue sim+esim,4 233
-42,17 pro 512 silver sim+esim,4 248
-43,17 pro 1TB orange esim,4 529
-44,17 pro 1TB blue esim,4 529
-45,17 pro 1TB silver eSIM,4 618
-46,17 pro 1TB orange sim+sim,4 795
-47,17 pro 1TB blue sim+esim,4 914
-48,17 pro 1TB silver sim+sim,4 914
-49,17 Pro Max 256 orange esim,3 641
-50,17 Pro Max 256 blue esim,3 641
+30,iPad Air 13 (M4) 2026 128 Purple,2 610
+31,17 pro 256 orange esim,3 320
+32,17 pro 256 blue esim,3 480
+33,17 Pro 256 Silver eSim,3 480
+34,17 pro 256 orange sim+esim,3 570
+35,17 pro 256 blue sim+esim,3 630
+36,17 pro 256 silver sim+esim,3 660
+37,17 pro 512 orange esim,3 980
+38,17 pro 512 blue esim,4 060
+39,17 pro 512 silver esim,4 060
+40,17 pro 512 orange sim+esim,4 190
+41,17 pro 512 blue sim+esim,4 230
+42,17 pro 512 silver sim+esim,4 250
+43,17 pro 1TB orange esim,4 530
+44,17 pro 1TB blue esim,4 530
+45,17 pro 1TB silver eSIM,4 620
+46,17 pro 1TB orange sim+sim,4 800
+47,17 pro 1TB blue sim+esim,4 910
+48,17 pro 1TB silver sim+sim,4 910
+49,17 Pro Max 256 orange esim,3 640
+50,17 Pro Max 256 blue esim,3 640
 51,17 Pro Max 256 silver esim,3 670
-52,17 Pro Max 256 orange sim+Esim,3 922
-53,17 Pro Max 256 blue sim+Esim,3 922
-54,17 Pro Max 256 silver sim+Esim,3 996
-55,17 Pro Max 512 orange esim,4 218
-56,17 Pro Max 512 silver esim,4 218
-57,17 Pro Max 512 blue esim,4 277
-58,17 Pro Max 512 orange sim+Esim,4 529
-59,17 Pro Max 512 blue sim+Esim,4 588
-60,17 Pro Max 512 silver sim+Esim,4 632
-61,17 pro max 1TB orange esim,4 869
-62,17 pro max 1TB blue esim,4 825
-63,17 pro max 1TB silver esim,4 884
-64,17 pro max 1TB orange sim+Esim,5 269
+52,17 Pro Max 256 orange sim+Esim,3 920
+53,17 Pro Max 256 blue sim+Esim,3 920
+54,17 Pro Max 256 silver sim+Esim,4 000
+55,17 Pro Max 512 orange esim,4 220
+56,17 Pro Max 512 silver esim,4 220
+57,17 Pro Max 512 blue esim,4 280
+58,17 Pro Max 512 orange sim+Esim,4 530
+59,17 Pro Max 512 blue sim+Esim,4 590
+60,17 Pro Max 512 silver sim+Esim,4 630
+61,17 pro max 1TB orange esim,4 870
+62,17 pro max 1TB blue esim,4 830
+63,17 pro max 1TB silver esim,4 880
+64,17 pro max 1TB orange sim+Esim,5 270
 65,17 pro max 1TB blue sim+Esim,5 210
-66,17 pro max 1TB silver sim+Esim,5 239
-67,Air 256 Black eSim,2 694
-68,Air 256 White eSim,2 694
-69,Air 256 Gold eSim,2 649
-70,Air 256 Blue eSim,2 649
-71,17e 256 black Esim,2 028
-72,17e 256 white Esim,2 028
-73,17e 256 pink Esim,2 028
-74,17e 256 Black Sim+eSim,2 131
-75,17e 256 Pink Sim+eSim,2 087
-76,17 256 Black eSim,2 664
-77,17 256 White eSim,2 694
-78,17 256 Blue eSim,2 634
-79,17 256 Sage eSim,2 649
-80,17 256 Lavender eSim,2 634
-81,17 256 Black Sim+eSim,2 723
-82,17 256 White Sim+eSim,2 723
-83,17 256 Blue Sim+eSim,2 708
-84,17 256 Sage Sim+eSim,2 694
-85,17 256 Lavender Sim+eSim,2 753
-86,17 512 black Esim,3 167
-87,17 512 white Esim,3 241
-88,17 512 lavander Esim,3 256
-89,17 512 blue ESIM,3 241
+66,17 pro max 1TB silver sim+Esim,5 240
+67,Air 256 Black eSim,2 690
+68,Air 256 White eSim,2 690
+69,Air 256 Gold eSim,2 650
+70,Air 256 Blue eSim,2 650
+71,17e 256 black Esim,2 030
+72,17e 256 white Esim,2 030
+73,17e 256 pink Esim,2 030
+74,17e 256 Black Sim+eSim,2 130
+75,17e 256 Pink Sim+eSim,2 090
+76,17 256 Black eSim,2 660
+77,17 256 White eSim,2 690
+78,17 256 Blue eSim,2 630
+79,17 256 Sage eSim,2 650
+80,17 256 Lavender eSim,2 630
+81,17 256 Black Sim+eSim,2 720
+82,17 256 White Sim+eSim,2 720
+83,17 256 Blue Sim+eSim,2 710
+84,17 256 Sage Sim+eSim,2 690
+85,17 256 Lavender Sim+eSim,2 750
+86,17 512 black Esim,3 170
+87,17 512 white Esim,3 240
+88,17 512 lavander Esim,3 260
+89,17 512 blue ESIM,3 240
 90,17 512 black Sim+Esim,3 330
-91,17 512 blue Sim+Esim,3 345
-92,17 512 white Sim+Esim,3 404
-93,17 512 sage Sim+Esim,3 389
-94,17 512 lavender Sim+Esim,3 389
-95,16е 128 GB black,1 835
+91,17 512 blue Sim+Esim,3 350
+92,17 512 white Sim+Esim,3 400
+93,17 512 sage Sim+Esim,3 390
+94,17 512 lavender Sim+Esim,3 390
+95,16е 128 GB black,1 840
