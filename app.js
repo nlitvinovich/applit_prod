@@ -1,7 +1,7 @@
 let products = [];
 let cart = JSON.parse(localStorage.getItem('cart') || '[]');
 
-/* Badge */
+/* Обновление бейджа корзины */
 function updateCartCount() {
   const tabCart = document.getElementById('tab-cart');
   const badge = tabCart.querySelector('.tab-badge');
@@ -14,10 +14,8 @@ fetch('products.csv?' + Date.now())
   .then(res => res.text())
   .then(text => {
     const lines = text.trim().split('\n');
-
     const first = lines[0].split(',');
     const lastUpdate = first[1]?.trim();
-
     const headers = lines[1].split(',');
 
     products = lines.slice(2).map(line => {
@@ -44,7 +42,7 @@ function renderCatalog(data) {
     const card = document.createElement('div');
     card.className = 'card';
 
-    // ❗ Берём категорию ИЗ CSV, НЕ вычисляем сами
+    // Берём категорию из CSV
     card.dataset.category = item.category;
 
     card.innerHTML = `
@@ -84,9 +82,18 @@ document.getElementById('tab-cart').addEventListener('click', () => {
     </div>
   `).join('');
 
-  const total = cart.reduce((sum, item) => sum + Number(item.price), 0);
-  document.getElementById('cart-total').textContent = `Итого: ${total} BYN`;
+  // 🔧 Исправление NaN BYN: нормализуем цену
+  const total = cart.reduce((sum, item) => {
+    const raw = String(item.price || '');
+    const normalized = raw
+      .replace(/\s/g, '')      // обычные пробелы
+      .replace(/\u00A0/g, '')  // неразрывные пробелы
+      .replace(/\u202F/g, ''); // узкие неразрывные пробелы
+    const num = parseFloat(normalized);
+    return sum + (isNaN(num) ? 0 : num);
+  }, 0);
 
+  document.getElementById('cart-total').textContent = `Итого: ${total} BYN`;
   modal.style.display = 'flex';
 });
 
@@ -113,7 +120,15 @@ document.getElementById('cart-order-btn').addEventListener('click', () => {
     return;
   }
 
-  const total = cart.reduce((sum, item) => sum + Number(item.price), 0);
+  const total = cart.reduce((sum, item) => {
+    const raw = String(item.price || '');
+    const normalized = raw
+      .replace(/\s/g, '')
+      .replace(/\u00A0/g, '')
+      .replace(/\u202F/g, '');
+    const num = parseFloat(normalized);
+    return sum + (isNaN(num) ? 0 : num);
+  }, 0);
 
   const text =
     "🛒 Заказ appLit:\n" +
@@ -121,7 +136,6 @@ document.getElementById('cart-order-btn').addEventListener('click', () => {
     `\nИтого: ${total} BYN`;
 
   const encoded = encodeURIComponent(text).replace(/%0A/g, "%0A");
-
   window.location.href = `https://t.me/ilitvinovich?text=${encoded}`;
 });
 
@@ -130,15 +144,12 @@ document.getElementById('share-catalog-btn').addEventListener('click', async () 
   const shareText =
     "Лови каталог appLit!\nОткрой в Safari → Поделиться → Добавить на экран Домой\nКороче, как мы делали с АльфаБанком :)\nhttps://applitcat.vercel.app/";
 
-  const shareData = {
-    title: "Каталог appLit",
-    text: shareText
-  };
+  const shareData = { title: "Каталог appLit", text: shareText };
 
   if (navigator.share) {
     try {
       await navigator.share(shareData);
-    } catch (err) {
+    } catch {
       alert("Не удалось открыть окно поделиться");
     }
   } else {
@@ -162,7 +173,7 @@ window.addEventListener('scroll', () => {
   lastScroll = currentScroll;
 });
 
-/* ФИЛЬТРАЦИЯ ПО КАТЕГОРИЯМ */
+/* Фильтрация по категориям */
 document.querySelectorAll('.category-buttons button').forEach(btn => {
   btn.addEventListener('click', () => {
     const category = btn.dataset.category;
@@ -173,12 +184,8 @@ document.querySelectorAll('.category-buttons button').forEach(btn => {
 
     document.querySelectorAll('.card').forEach(card => {
       const cardCategory = card.dataset.category;
-
-      if (category === 'all' || cardCategory === category) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
+      card.style.display =
+        category === 'all' || cardCategory === category ? '' : 'none';
     });
   });
 });
