@@ -11,14 +11,14 @@ if not session_data:
 with open("user.session", "wb") as f:
     f.write(base64.b64decode(session_data))
 
-# === 2. Авторизация как пользователь ===
+# === 2. Авторизация ===
 API_ID = int(os.getenv("API_ID"))
 API_HASH = os.getenv("API_HASH")
-CHANNEL = os.getenv("TG_CHANNEL")  # invite-link
+CHANNEL = os.getenv("TG_CHANNEL")
 
 client = TelegramClient("user", API_ID, API_HASH)
 
-# === 3. Скачиваем ВСЕ сообщения канала ===
+# === 3. Скачиваем ВСЕ сообщения ===
 async def fetch_messages():
     await client.start()
 
@@ -29,18 +29,15 @@ async def fetch_messages():
 
     while True:
         batch = await client.get_messages(entity, limit=100, offset_id=offset_id)
-
         if not batch:
             break
 
         all_messages.extend(batch)
         offset_id = batch[-1].id
 
-        # Если пришло меньше 100 — значит это конец
         if len(batch) < 100:
             break
 
-    # Фильтруем только текстовые сообщения
     text_messages = [m.message for m in all_messages if m.message]
 
     os.makedirs("admin", exist_ok=True)
