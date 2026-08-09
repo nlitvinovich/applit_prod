@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -29,12 +31,6 @@ jobs:
           TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
         run: python pipeline.py
 
-      - name: Upload input.txt
-        uses: actions/upload-artifact@v4
-        with:
-          name: telegram-input
-          path: admin/input.txt
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -43,8 +39,12 @@ jobs:
       - name: Run generator
         run: node admin/generator.js
 
-      - name: Upload products.csv
-        uses: actions/upload-artifact@v4
-        with:
-          name: products-csv
-          path: products.csv
+      - name: Commit updated CSV
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add products.csv
+          git commit -m "Update products.csv"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
