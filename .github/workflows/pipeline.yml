@@ -1,37 +1,27 @@
-name: Auto Update Products
+name: Telegram → CSV Generator
 
 on:
-  schedule:
-    - cron: "0 * * * *"
   workflow_dispatch:
-
-permissions:
-  contents: write   # ← ДАЁТ ПРАВО PUSH ДЛЯ GITHUB ACTIONS
+  schedule:
+    - cron: "0 */6 * * *" # каждые 6 часов
 
 jobs:
-  run-pipeline:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}   # ← важно
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "24"   # ← Node 24, без deprecated
-
-      - name: Install Python dependencies
+      - name: Install Telethon
         run: pip install telethon
 
-      - name: Restore session + run Telethon export
+      - name: Run Telegram pipeline
         env:
           API_ID: ${{ secrets.API_ID }}
           API_HASH: ${{ secrets.API_HASH }}
@@ -39,13 +29,22 @@ jobs:
           TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
         run: python pipeline.py
 
+      - name: Upload input.txt
+        uses: actions/upload-artifact@v3
+        with:
+          name: telegram-input
+          path: admin/input.txt
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
       - name: Run generator
         run: node admin/generator.js
 
-      - name: Auto commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Upload products.csv
+        uses: actions/upload-artifact@v3
         with:
-          commit_message: "Auto-update products.csv"
-          file_pattern: products.csv
-          commit_user_name: "github-actions[bot]"
-          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          name: products-csv
+          path: products.csv
