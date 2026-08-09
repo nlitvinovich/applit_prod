@@ -20,14 +20,15 @@ const lines = rawInput
 let id = 1;
 const rows = [];
 
-// Очистка строки от Markdown, эмодзи, мусора
+// Очистка строки от Markdown, эмодзи, мусора + нормализация Unicode
 function cleanLine(line) {
   return line
-    .replace(/\*\*/g, '')                         // markdown
-    .replace(/🔥/g, '')                           // конкретный эмодзи
-    .replace(/[\u{1F300}-\u{1FAFF}]/gu, '')       // любые эмодзи
-    .replace(/[\u{FE0F}]/g, '')                   // emoji modifiers
-    .replace(/\s+/g, ' ')                         // лишние пробелы
+    .normalize('NFKC')                     // 🔥 нормализует Unicode, сохраняет буквы (Blue не станет Ble)
+    .replace(/\*\*/g, '')                  // markdown
+    .replace(/🔥/g, '')                    // конкретный эмодзи
+    .replace(/[\u{1F300}-\u{1FAFF}]/gu, '')// любые эмодзи
+    .replace(/[\u{FE0F}]/g, '')            // emoji modifiers
+    .replace(/\s+/g, ' ')                  // лишние пробелы
     .trim();
 }
 
