@@ -18,9 +18,14 @@ API_HASH = os.getenv("API_HASH")
 client = TelegramClient("user", API_ID, API_HASH)
 
 # === 3. Скачиваем сообщения ===
+CHANNEL = os.getenv("TG_CHANNEL")  # invite-link
+
 async def fetch_messages():
     await client.start()
-    messages = await client.get_messages("gadgetstore", limit=500)
+
+    entity = await client.get_entity(CHANNEL)
+    messages = await client.get_messages(entity, limit=500)
+
     text = "\n".join([m.message for m in messages if m.message])
 
     os.makedirs("admin", exist_ok=True)
