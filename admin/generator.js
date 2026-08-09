@@ -15,6 +15,7 @@ const lines = input.split('\n').map(l => l.trim()).filter(Boolean);
 let id = 1;
 const rows = [];
 
+// Пример строки: "iPhone 15 Pro 256GB Black DualSIM - 4999 BYN"
 const productRegex = /^(.+?)\s+(\d+(?:TB|GB)?)\s+(\w+)\s+([\w+]+)\s*-\s*(\d+)\s*BYN/i;
 
 for (const line of lines) {
@@ -22,7 +23,10 @@ for (const line of lines) {
   if (match) {
     const [_, name, memory, color, sim, priceRaw] = match;
     const model = `${name} ${memory} ${color} ${sim}`;
-    const price = Number(priceRaw).toLocaleString('ru-RU', { minimumFractionDigits: 0 });
+    const price = Number(priceRaw).toLocaleString('ru-RU', {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    });
     rows.push({ id, model, price });
     id++;
   }
@@ -33,14 +37,15 @@ if (rows.length === 0) {
   process.exit(1);
 }
 
-// === Форматирование даты ===
+// === Форматирование даты по Минску ===
 const now = new Date();
 const formattedDate = now.toLocaleString('ru-RU', {
   day: '2-digit',
   month: '2-digit',
   year: 'numeric',
   hour: '2-digit',
-  minute: '2-digit'
+  minute: '2-digit',
+  timeZone: 'Europe/Minsk'
 }).replace(',', '');
 
 // === Формируем CSV ===
