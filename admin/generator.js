@@ -12,24 +12,17 @@ if (!fs.existsSync(inputPath)) {
 const input = fs.readFileSync(inputPath, 'utf-8');
 const lines = input.split('\n').map(l => l.trim()).filter(Boolean);
 
-let category = '';
 let id = 1;
 const rows = [];
 
-const categoryRegex = /^📱\s*(.+)$/i;
 const productRegex = /^(.+?)\s+(\d+(?:TB|GB)?)\s+(\w+)\s+([\w+]+)\s*-\s*(\d+)\s*BYN/i;
 
 for (const line of lines) {
-  const catMatch = categoryRegex.exec(line);
-  if (catMatch) {
-    category = catMatch[1].trim();
-    continue;
-  }
-
-  const prodMatch = productRegex.exec(line);
-  if (prodMatch) {
-    const [_, name, memory, color, sim, price] = prodMatch;
-    rows.push({ id, category, name, memory, color, sim, price });
+  const match = productRegex.exec(line);
+  if (match) {
+    const [_, name, memory, color, sim, price] = match;
+    const model = `${name} ${memory} ${color} ${sim}`;
+    rows.push({ id, model, price });
     id++;
   }
 }
@@ -39,8 +32,13 @@ if (rows.length === 0) {
   process.exit(1);
 }
 
-const header = 'id,category,name,memory,color,sim,price\n';
-const csv = header + rows.map(r => `${r.id},${r.category},${r.name},${r.memory},${r.color},${r.sim},${r.price}`).join('\n');
+// === Формируем CSV ===
+const now = new Date();
+const formattedDate = now.toLocaleString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+let csv = `last_update,${formattedDate}\n`;
+csv += 'id,model,price\n';
+csv += rows.map(r => `${r.id},${r.model},${r.price}`).join('\n');
 
 fs.writeFileSync(outputPath, csv, 'utf-8');
 console.log('✔ products.csv создан');
