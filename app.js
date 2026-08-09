@@ -9,6 +9,22 @@ function updateCartCount() {
 }
 updateCartCount();
 
+/* Нормализация категорий генератора */
+function normalizeCategory(raw) {
+  if (!raw) return 'all';
+
+  const c = raw.toLowerCase().trim();
+
+  if (c.includes('air') || c.includes('mac')) return 'macbook';
+  if (c.includes('iphone')) return 'iphone';
+  if (c.includes('ipad')) return 'ipad';
+  if (c.includes('pods')) return 'airpods';
+  if (c.includes('watch')) return 'apple watch';
+  if (c.includes('акс') || c.includes('access')) return 'аксессуары';
+
+  return c;
+}
+
 /* Загрузка CSV */
 fetch('products.csv?' + Date.now())
   .then(res => res.text())
@@ -44,8 +60,8 @@ function renderCatalog(data) {
     const card = document.createElement('div');
     card.className = 'card';
 
-    /* Категория в DOM */
-    card.dataset.category = item.category;
+    /* нормализуем категорию */
+    card.dataset.category = normalizeCategory(item.category);
 
     card.innerHTML = `
       <div class="card-title">${item.model}</div>
