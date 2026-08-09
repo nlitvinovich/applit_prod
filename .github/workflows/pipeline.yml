@@ -1,5 +1,8 @@
 name: Telegram → CSV Generator
 
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
   schedule:
