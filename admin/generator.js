@@ -11,6 +11,7 @@ if (!fs.existsSync(inputPath)) {
 
 const rawInput = fs.readFileSync(inputPath, 'utf-8');
 
+// Разбиваем на строки
 const lines = rawInput
   .split('\n')
   .map(l => l.trim())
@@ -19,14 +20,14 @@ const lines = rawInput
 let id = 1;
 const rows = [];
 
-// Очистка строки
+// Очистка строки от Markdown, эмодзи, мусора + нормализация Unicode
 function cleanLine(line) {
   return line
-    .normalize('NFKC')
-    .replace(/\*\*/g, '')
-    .replace(/🔥/g, '')
-    .replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '')
-    .replace(/\s+/g, ' ')
+    .normalize('NFKC') // сохраняет буквы, включая "u" в Blue
+    .replace(/\*\*/g, '') // markdown
+    .replace(/🔥/g, '') // конкретный эмодзи
+    .replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '') // безопасное удаление эмодзи
+    .replace(/\s+/g, ' ') // лишние пробелы
     .trim();
 }
 
@@ -34,42 +35,58 @@ function cleanLine(line) {
 function classify(model) {
   const m = model.toLowerCase();
 
-  // iphone — любые 13/14/15/16/17, pro, max, plus, e, air
+  // === IPHONE ===
   if (
-    m.includes('iphone') ||
-    m.startsWith('17') ||
-    m.startsWith('16') ||
+    m.includes('iphone') ||          // любые iPhone
+    m.startsWith('17') ||            // 17 / 17 pro / 17 pro max / 17e / 17 air
+    m.startsWith('16') ||            // 16 / 16 plus / 16e
     m.startsWith('15') ||
     m.startsWith('14') ||
-    m.startsWith('13/')
+    m.startsWith('13/') ||
+    (
+      m.startsWith('air ') &&        // Air 256 / Air 512 → iPhone Air
+      !m.includes('ipad')            // но НЕ iPad Air
+    ) ||
+    m.match(/^air\s*\d+/)            // Air + число → iPhone Air
   ) {
     return 'iphone';
   }
 
-  // ipad — любые iPad, iPad Air, iPad Pro
+  // === IPAD ===
   if (m.includes('ipad')) {
     return 'ipad';
   }
 
-  // macbook — любые MacBook, Air 13/15 M4/M5, Neo
-  if (m.includes('macbook') || m.startsWith('air 13 m') || m.startsWith('air 15 m')) {
+  // === MACBOOK ===
+  if (
+    m.includes('macbook') ||
+    m.startsWith('air 13 m') ||       // Air 13 M4/M5
+    m.startsWith('air 15 m') ||       // Air 15 M5
+    m.includes('neo')                 // MacBook Neo
+  ) {
     return 'macbook';
   }
 
-  // airpods — любые AirPods, AirPods Pro, Max, 4, ANC
+  // === AIRPODS ===
   if (m.includes('airpods')) {
     return 'airpods';
   }
 
-  // apple watch — SE3, S11, Ultra, Watch
-  if (m.includes('watch') || m.includes('se3') || m.includes('s11') || m.includes('ultra')) {
+  // === APPLE WATCH ===
+  if (
+    m.includes('watch') ||
+    m.includes('se3') ||
+    m.includes('s11') ||
+    m.includes('ultra')
+  ) {
     return 'apple watch';
   }
 
-  // аксессуары — всё остальное: Pencil, Adapter, Magic Mouse, AirTag и прочее
+  // === АКСЕССУАРЫ ===
   return 'аксессуары';
 }
 
+// Универсальный регекс: модель - цена BYN
 const productRegex = /(.*?)\s*-\s*([\d\s]+)\s*BYN/i;
 
 for (const raw of lines) {
@@ -84,6 +101,7 @@ for (const raw of lines) {
   const numericPrice = parseInt(priceRaw, 10);
   if (isNaN(numericPrice)) continue;
 
+  // Округление до ближайших 10
   const roundedPrice = Math.round(numericPrice / 10) * 10;
   const price = roundedPrice.toLocaleString('ru-RU');
 
@@ -98,14 +116,13 @@ if (rows.length === 0) {
   process.exit(1);
 }
 
+// Сортировка по категориям
 rows.sort((a, b) => {
   const order = ['iphone', 'ipad', 'macbook', 'airpods', 'apple watch', 'аксессуары'];
-  const ai = order.indexOf(a.category);
-  const bi = order.indexOf(b.category);
-  if (ai !== bi) return ai - bi;
-  return 0;
+  return order.indexOf(a.category) - order.indexOf(b.category);
 });
 
+// Дата Минск
 const now = new Date();
 const formattedDate = now.toLocaleString('ru-RU', {
   day: '2-digit',
@@ -116,6 +133,7 @@ const formattedDate = now.toLocaleString('ru-RU', {
   timeZone: 'Europe/Minsk'
 }).replace(',', '');
 
+// Формируем CSV
 let csv = `last_update,${formattedDate}\n`;
 csv += 'id,model,price,category\n';
 csv += rows.map(r => `${r.id},${r.model},${r.price},${r.category}`).join('\n');
