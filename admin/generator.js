@@ -20,8 +20,9 @@ const productRegex = /^(.+?)\s+(\d+(?:TB|GB)?)\s+(\w+)\s+([\w+]+)\s*-\s*(\d+)\s*
 for (const line of lines) {
   const match = productRegex.exec(line);
   if (match) {
-    const [_, name, memory, color, sim, price] = match;
+    const [_, name, memory, color, sim, priceRaw] = match;
     const model = `${name} ${memory} ${color} ${sim}`;
+    const price = Number(priceRaw).toLocaleString('ru-RU', { minimumFractionDigits: 0 });
     rows.push({ id, model, price });
     id++;
   }
@@ -32,13 +33,20 @@ if (rows.length === 0) {
   process.exit(1);
 }
 
-// === Формируем CSV ===
+// === Форматирование даты ===
 const now = new Date();
-const formattedDate = now.toLocaleString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+const formattedDate = now.toLocaleString('ru-RU', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit'
+}).replace(',', '');
 
+// === Формируем CSV ===
 let csv = `last_update,${formattedDate}\n`;
 csv += 'id,model,price\n';
 csv += rows.map(r => `${r.id},${r.model},${r.price}`).join('\n');
 
 fs.writeFileSync(outputPath, csv, 'utf-8');
-console.log('✔ products.csv создан');
+console.log(`✔ products.csv создан (${rows.length} товаров, обновлено ${formattedDate})`);
