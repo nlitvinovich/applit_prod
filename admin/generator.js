@@ -15,31 +15,45 @@ const lines = input.split('\n').map(l => l.trim()).filter(Boolean);
 let id = 1;
 const rows = [];
 
-// Пример строки: "iPhone 15 Pro 256GB Black DualSIM - 4999 BYN"
-const productRegex = /^(.+?)\s+(\d+(?:TB|GB)?)\s+(\w+)\s+([\w+]+)\s*-\s*(\d+)\s*BYN/i;
-
+// Универсальный парсер: модель + цена
 for (const line of lines) {
-  const match = productRegex.exec(line);
-  if (match) {
-    const [_, name, memory, color, sim, priceRaw] = match;
+  // Ищем цену в конце строки
+  const priceMatch = line.match(/(\d[\d\s]*)\s*(?:BYN|byn|Br|р\.?|руб\.?|бел\.руб\.?)?$/i);
+  if (!priceMatch) continue;
 
-    const model = `${name} ${memory} ${color} ${sim}`;
+  const priceRaw = priceMatch[1];
+  const model = line.replace(priceMatch[0], '').trim().replace(/[-–—]\s*$/, '').trim();
 
-    // === Округление цены до ближайших 10 BYN ===
-    const cleanPrice = priceRaw.replace(/[^\d]/g, '');
-    const numericPrice = parseInt(cleanPrice, 10);
-    const roundedPrice = Math.round(numericPrice / 10) * 10;
-    const price = roundedPrice.toLocaleString('ru-RU');
+  if (!model) continue;
 
-    rows.push({ id, model, price });
-    id++;
-  }
+  // Чистим цену
+  const cleanPrice = priceRaw.replace(/[^\d]/g, '');
+  const numericPrice = parseInt(cleanPrice, 10);
+
+  if (isNaN(numericPrice)) continue;
+
+  // Округление до ближайших 10 BYN
+  const roundedPrice = Math.round(numericPrice / 10) * 10;
+  const price = roundedPrice.toLocaleString('ru-RU');
+
+  rows.push({ id, model, price });
+  id++;
 }
 
 if (rows.length === 0) {
   console.error('❌ Нет данных для генерации CSV');
   process.exit(1);
 }
+
+// === Сортировка: сначала iPhone ===
+rows.sort((a, b) => {
+  const aIsIphone = a.model.toLowerCase().startsWith("iphone");
+  const bIsIphone = b.model.toLowerCase().startsWith("iphone");
+
+  if (aIsIphone && !bIsIphone) return -1;
+  if (!aIsIphone && bIsIphone) return 1;
+  return 0;
+});
 
 // === Форматирование даты по Минску ===
 const now = new Date();
