@@ -1,5 +1,29 @@
-last_update,09.08.2026 15:57
+last_update,09.08.2026 16:09
 id,model,price,category
+43,Air 13 M4/16/256 Starlight,3 540,iphone
+44,Air 13 M4/16/256 Sky Blue,3 540,iphone
+45,Air 13 M4/16/256 Midnight,3 540,iphone
+46,Air 13 M4/16/256 silver,3 540,iphone
+47,Air 13 M5 16/512 Midnight,3 950,iphone
+48,Air 13 M5 16/512 Silver,3 950,iphone
+49,Air 13 M5 16/512 sky blue,3 940,iphone
+50,Air 13 M5 16/512 starlight,3 920,iphone
+51,Air 13 M5 16/1TB Midnight,4 440,iphone
+52,Air 13 M5 16/1TB Silver,4 460,iphone
+53,Air 13 M5 16/1TB sky blue,4 410,iphone
+54,Air 13 M5 16/1TB starlight,4 410,iphone
+55,Air 13 M5 24/1TB Midnight,5 610,iphone
+56,Air 13 M5 24/1TB Silver,5 590,iphone
+57,Air 13 M5 24/1TB sky blue,5 570,iphone
+58,Air 13 M5 24/1TB starlight,5 430,iphone
+59,Air 15 M5 2026 16/512 Midnight,4 560,iphone
+60,Air 15 M5 2026 16/512 Starlight,4 590,iphone
+61,Air 15 M5 2026 16/512 sky blue,4 570,iphone
+62,Air 15 M5 2026 16/512 silver,4 590,iphone
+63,Air 15 M5 2026 16/1TB Midnight,5 460,iphone
+64,Air 15 M5 2026 16/1TB Sky Blue,5 460,iphone
+65,Air 15 M5 2026 16/1TB Silver,5 460,iphone
+66,Air 15 M5 2026 16/1TB Starlight,5 460,iphone
 97,17 pro 256 orange esim,3 320,iphone
 98,17 pro 256 blue esim,3 480,iphone
 99,17 Pro 256 Silver eSim,3 480,iphone
@@ -36,6 +60,14 @@ id,model,price,category
 130,17 pro max 1TB orange sim+Esim,5 270,iphone
 131,17 pro max 1TB blue sim+Esim,5 210,iphone
 132,17 pro max 1TB silver sim+Esim,5 240,iphone
+133,Air 256 Black eSim,2 690,iphone
+134,Air 256 White eSim,2 690,iphone
+135,Air 256 Gold eSim,2 650,iphone
+136,Air 256 Blue eSim,2 650,iphone
+137,Air 512 black,3 050,iphone
+138,Air 512 gold,2 920,iphone
+139,Air 512 blue,2 920,iphone
+140,Air 512 white,3 080,iphone
 141,17e 256 black Esim,2 030,iphone
 142,17e 256 white Esim,2 030,iphone
 143,17e 256 pink Esim,2 030,iphone
@@ -124,30 +156,6 @@ id,model,price,category
 40,MacBook Neo 13 8/512 Indigo,2 650,macbook
 41,MacBook Neo 13 8/512 Citrus,2 620,macbook
 42,MacBook Neo 13 8/512 Silver,2 750,macbook
-43,Air 13 M4/16/256 Starlight,3 540,macbook
-44,Air 13 M4/16/256 Sky Blue,3 540,macbook
-45,Air 13 M4/16/256 Midnight,3 540,macbook
-46,Air 13 M4/16/256 silver,3 540,macbook
-47,Air 13 M5 16/512 Midnight,3 950,macbook
-48,Air 13 M5 16/512 Silver,3 950,macbook
-49,Air 13 M5 16/512 sky blue,3 940,macbook
-50,Air 13 M5 16/512 starlight,3 920,macbook
-51,Air 13 M5 16/1TB Midnight,4 440,macbook
-52,Air 13 M5 16/1TB Silver,4 460,macbook
-53,Air 13 M5 16/1TB sky blue,4 410,macbook
-54,Air 13 M5 16/1TB starlight,4 410,macbook
-55,Air 13 M5 24/1TB Midnight,5 610,macbook
-56,Air 13 M5 24/1TB Silver,5 590,macbook
-57,Air 13 M5 24/1TB sky blue,5 570,macbook
-58,Air 13 M5 24/1TB starlight,5 430,macbook
-59,Air 15 M5 2026 16/512 Midnight,4 560,macbook
-60,Air 15 M5 2026 16/512 Starlight,4 590,macbook
-61,Air 15 M5 2026 16/512 sky blue,4 570,macbook
-62,Air 15 M5 2026 16/512 silver,4 590,macbook
-63,Air 15 M5 2026 16/1TB Midnight,5 460,macbook
-64,Air 15 M5 2026 16/1TB Sky Blue,5 460,macbook
-65,Air 15 M5 2026 16/1TB Silver,5 460,macbook
-66,Air 15 M5 2026 16/1TB Starlight,5 460,macbook
 1,AirPods 4,430,airpods
 2,AirPods 4 ANC,570,airpods
 3,AirPods Pro 3,680,airpods
@@ -182,11 +190,3 @@ id,model,price,category
 20,AirTag 1 Шт,240,аксессуары
 21,AirTag 4 Шт,340,аксессуары
 22,AirTag 4Pac 2Gen,440,аксессуары
-133,Air 256 Black eSim,2 690,аксессуары
-134,Air 256 White eSim,2 690,аксессуары
-135,Air 256 Gold eSim,2 650,аксессуары
-136,Air 256 Blue eSim,2 650,аксессуары
-137,Air 512 black,3 050,аксессуары
-138,Air 512 gold,2 920,аксессуары
-139,Air 512 blue,2 920,аксессуары
-140,Air 512 white,3 080,аксессуары
