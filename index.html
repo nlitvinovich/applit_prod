@@ -1,25 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>appLit Catalog</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>appLit Catalog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=20">
 </head>
+
 <body>
 
-<div class="category-buttons">
-  <button data-category="all" class="active">Все</button>
-  <button data-category="iphone">iPhone</button>
-  <button data-category="ipad">iPad</button>
-  <button data-category="macbook">MacBook</button>
-  <button data-category="airpods">AirPods</button>
-  <button data-category="apple watch">Apple Watch</button>
-  <button data-category="аксессуары">Аксессуары</button>
-</div>
+  <!-- Поиск -->
+  <div class="search-bar-wrapper">
+    <input id="search" type="text" placeholder="Поиск по моделям…">
+  </div>
 
-<div id="catalog"></div>
+  <!-- Верхняя строка: обновлено + поделиться + дисклеймер -->
+  <div class="top-row">
+    <div class="top-left">
+      <div id="update-time"></div>
+      <button id="share-catalog-btn" class="share-catalog-btn">Отправить каталог другу</button>
+    </div>
 
-<script src="app.js"></script>
+    <div class="top-right">
+      приложение носит исключительно информационный характер<br>
+      и ни при каких условиях не является публичной офертой
+    </div>
+  </div>
+
+  <!-- Каталог -->
+  <div id="catalog"></div>
+
+  <!-- Модальное окно корзины -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+
+      <button class="cart-close-btn" id="cart-close">×</button>
+
+      <h2>Корзина</h2>
+
+      <div id="cart-items"></div>
+
+      <div class="cart-bottom-row">
+        <div id="cart-total" class="cart-total"></div>
+        <button id="cart-order-btn" class="cart-order-btn">Заказать</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Таббар -->
+  <div class="tabbar">
+    <div class="tab-item" id="tab-cart">
+      🛒 Корзина
+      <div class="tab-badge">0</div>
+    </div>
+  </div>
+
+  <script src="app.js?v=20"></script>
 </body>
 </html>
