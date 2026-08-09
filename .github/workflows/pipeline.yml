@@ -6,7 +6,7 @@ permissions:
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "*/30 * * * *"   # запуск каждые 30 минут
 
 jobs:
   build:
