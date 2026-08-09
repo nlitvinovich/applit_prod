@@ -35,6 +35,18 @@ function cleanLine(line) {
 function classify(model) {
   const m = model.toLowerCase();
 
+  // === MACBOOK ===
+  // Сначала отсекаем все MacBook, чтобы Air 13 / Air 15 не улетали в iPhone
+  if (
+    m.includes('macbook') ||
+    m.startsWith('air 13 m') ||       // Air 13 M4/M5
+    m.startsWith('air 15 m') ||       // Air 15 M5
+    m.includes('neo') ||              // MacBook Neo
+    (m.includes('air') && m.includes('mac')) // любые строки с Air + Mac
+  ) {
+    return 'macbook';
+  }
+
   // === IPHONE ===
   if (
     m.includes('iphone') ||          // любые iPhone
@@ -47,7 +59,10 @@ function classify(model) {
       m.startsWith('air ') &&        // Air 256 / Air 512 → iPhone Air
       !m.includes('ipad')            // но НЕ iPad Air
     ) ||
-    m.match(/^air\s*\d+/)            // Air + число → iPhone Air
+    (
+      m.match(/^air\s*\d+/) &&       // Air + число → iPhone Air
+      !m.includes('mac')             // но НЕ MacBook Air
+    )
   ) {
     return 'iphone';
   }
@@ -55,16 +70,6 @@ function classify(model) {
   // === IPAD ===
   if (m.includes('ipad')) {
     return 'ipad';
-  }
-
-  // === MACBOOK ===
-  if (
-    m.includes('macbook') ||
-    m.startsWith('air 13 m') ||       // Air 13 M4/M5
-    m.startsWith('air 15 m') ||       // Air 15 M5
-    m.includes('neo')                 // MacBook Neo
-  ) {
-    return 'macbook';
   }
 
   // === AIRPODS ===
