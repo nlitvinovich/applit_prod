@@ -1,97 +1,112 @@
-last_update,09.08.2026 15:05
+last_update,09.08.2026 15:11
 id,model,price
-1,SE3 40 Midnight 2025,820
-2,SE3 40 Starlight 2025,840
-3,SE3 44 Midnight 2025,890
-4,SE3 44 Starlight 2025,930
-5,S11 42 Jet Black,1 100
-6,S11 42 Space Gray,1 100
-7,S11 42 Rose Gold,1 140
-8,S11 46 Jet Black,1 180
-9,S11 46 Space Gray,1 150
-10,S11 46 Rose Gold,1 150
-11,iPad 11 128GB WiFi blue,1 390
-12,iPad 11 128GB WiFi silver,1 430
-13,iPad 11 128GB WiFi pink,1 470
-14,iPad 11 128GB WiFi yellow,1 440
-15,iPad 11 256GB WiFi blue,1 670
-16,iPad 11 256GB WiFi silver,1 750
-17,iPad 11 256GB WiFi yellow,1 750
-18,iPad 11 256GB WiFi pink,1 670
-19,iPad Air 11 (M4) 2026 128 Space Gray,2 250
-20,iPad Air 11 (M4) 2026 128 Purple,2 280
-21,iPad Air 11 (M4) 2026 128 blue,2 180
-22,iPad Air 11 (M4) 2026 128 Starlight,2 280
-23,iPad Air 11 (M4) 2026 256 Space Gray,2 620
-24,iPad Air 11 (M4) 2026 256 Purple,2 620
-25,iPad Air 11 (M4) 2026 256 Blue,2 620
-26,iPad Air 11 (M4) 2026 256 Starlight,2 650
-27,iPad Air 13 (M4) 2026 128 Space Gray,2 660
-28,iPad Air 13 (M4) 2026 128 starlight,2 620
-29,iPad Air 13 (M4) 2026 128 Blue,2 590
-30,iPad Air 13 (M4) 2026 128 Purple,2 610
-31,17 pro 256 orange esim,3 320
-32,17 pro 256 blue esim,3 480
-33,17 Pro 256 Silver eSim,3 480
-34,17 pro 256 orange sim+esim,3 570
-35,17 pro 256 blue sim+esim,3 630
-36,17 pro 256 silver sim+esim,3 660
-37,17 pro 512 orange esim,3 980
-38,17 pro 512 blue esim,4 060
-39,17 pro 512 silver esim,4 060
-40,17 pro 512 orange sim+esim,4 190
-41,17 pro 512 blue sim+esim,4 230
-42,17 pro 512 silver sim+esim,4 250
-43,17 pro 1TB orange esim,4 530
-44,17 pro 1TB blue esim,4 530
-45,17 pro 1TB silver eSIM,4 620
-46,17 pro 1TB orange sim+sim,4 800
-47,17 pro 1TB blue sim+esim,4 910
-48,17 pro 1TB silver sim+sim,4 910
-49,17 Pro Max 256 orange esim,3 640
-50,17 Pro Max 256 blue esim,3 640
-51,17 Pro Max 256 silver esim,3 670
-52,17 Pro Max 256 orange sim+Esim,3 920
-53,17 Pro Max 256 blue sim+Esim,3 920
-54,17 Pro Max 256 silver sim+Esim,4 000
-55,17 Pro Max 512 orange esim,4 220
-56,17 Pro Max 512 silver esim,4 220
-57,17 Pro Max 512 blue esim,4 280
-58,17 Pro Max 512 orange sim+Esim,4 530
-59,17 Pro Max 512 blue sim+Esim,4 590
-60,17 Pro Max 512 silver sim+Esim,4 630
-61,17 pro max 1TB orange esim,4 870
-62,17 pro max 1TB blue esim,4 830
-63,17 pro max 1TB silver esim,4 880
-64,17 pro max 1TB orange sim+Esim,5 270
-65,17 pro max 1TB blue sim+Esim,5 210
-66,17 pro max 1TB silver sim+Esim,5 240
-67,Air 256 Black eSim,2 690
-68,Air 256 White eSim,2 690
-69,Air 256 Gold eSim,2 650
-70,Air 256 Blue eSim,2 650
-71,17e 256 black Esim,2 030
-72,17e 256 white Esim,2 030
-73,17e 256 pink Esim,2 030
-74,17e 256 Black Sim+eSim,2 130
-75,17e 256 Pink Sim+eSim,2 090
-76,17 256 Black eSim,2 660
-77,17 256 White eSim,2 690
-78,17 256 Blue eSim,2 630
-79,17 256 Sage eSim,2 650
-80,17 256 Lavender eSim,2 630
-81,17 256 Black Sim+eSim,2 720
-82,17 256 White Sim+eSim,2 720
-83,17 256 Blue Sim+eSim,2 710
-84,17 256 Sage Sim+eSim,2 690
-85,17 256 Lavender Sim+eSim,2 750
-86,17 512 black Esim,3 170
-87,17 512 white Esim,3 240
-88,17 512 lavander Esim,3 260
-89,17 512 blue ESIM,3 240
-90,17 512 black Sim+Esim,3 330
-91,17 512 blue Sim+Esim,3 350
-92,17 512 white Sim+Esim,3 400
-93,17 512 sage Sim+Esim,3 390
-94,17 512 lavender Sim+Esim,3 390
-95,16е 128 GB black,1 840
+1,AirPods Pro 3,680
+2,AirPods Max Blue,1 580
+3,AirPods Max Midnight,1 590
+4,AirPods MAX 2 (2026) Midnight,1 630
+5,AirPods MAX 2 (2026) Starlight,1 630
+6,AirPods MAX 2 (2026) Blue,1 640
+7,AirPods MAX 2 (2026) Purple,1 610
+8,AirPods MAX 2 (2026) Orange,1 600
+9,Pencil 3gen usbC,330
+10,Pencil Pro,410
+11,Adapter Apple 20W,70
+12,Magic Mouse (white),360
+13,Magic Mouse (grey),410
+14,AirTag 1 Шт,240
+15,AirTag 4 Шт,340
+16,AirTag 4Pac 2Gen,440
+17,SE3 40 Midnight 2025,820
+18,SE3 40 Starlight 2025,840
+19,SE3 44 Starlight 2025,930
+20,S11 42 Jet Black,1 100
+21,S11 42 Space Gray,1 100
+22,S11 42 Silver,1 150
+23,S11 46 Space Gray,1 150
+24,S11 46 Silver,1 200
+25,S11 46 Rose Gold,1 150
+26,MacBook Neo 13 8/256 Blush,2 350
+27,MacBook Neo 13 8/256 Indigo,2 290
+28,MacBook Neo 13 8/256 Citrus,2 340
+29,MacBook Neo 13 8/256 Silver,2 350
+30,MacBook Neo 13 8/512 Blush,2 810
+31,MacBook Neo 13 8/512 Indigo,2 650
+32,MacBook Neo 13 8/512 Citrus,2 620
+33,MacBook Neo 13 8/512 Silver,2 750
+34,Air 13 M4/16/256 Starlight,3 540
+35,Air 13 M4/16/256 Sky Blue,3 540
+36,Air 13 M4/16/256 Midnight,3 540
+37,Air 13 M4/16/256 silver,3 540
+38,Air 13 M5 16/512 Silver,3 950
+39,Air 13 M5 16/1TB Silver,4 460
+40,Air 13 M5 16/1TB sky blue,4 410
+41,Air 13 M5 16/1TB starlight,4 410
+42,Air 13 M5 24/1TB Silver,5 590
+43,Air 13 M5 24/1TB sky blue,5 570
+44,Air 15 M5 2026 16/512 Midnight,4 560
+45,Air 15 M5 2026 16/512 sky blue,4 570
+46,Air 15 M5 2026 16/512 silver,4 590
+47,Air 15 M5 2026 16/1TB Starlight,5 460
+48,iPad 11 128GB WiFi silver,1 430
+49,iPad Air 11 (M4) 2026 128 Purple,2 280
+50,iPad Air 11 (M4) 2026 128 Starlight,2 280
+51,iPad Air 11 (M4) 2026 256 Space Gray,2 620
+52,iPad Air 11 (M4) 2026 256 Purple,2 620
+53,iPad Air 11 (M4) 2026 256 Blue,2 620
+54,iPad Air 11 (M4) 2026 256 Starlight,2 650
+55,iPad Air 13 (M4) 2026 128 starlight,2 620
+56,iPad Air 13 (M4) 2026 128 Blue,2 590
+57,iPad Air 13 (M4) 2026 128 Purple,2 610
+58,iPad Air 13 M4 256 Starlight Wi-Fi,3 210
+59,iPad Pro 11 M5 256 Black,3 540
+60,iPad Pro 11 M5 256 Silver,3 540
+61,iPad Pro 11 M5 512GB silver Wi-Fi,4 030
+62,iPad Pro 13 M5 256 Black,4 000
+63,iPad Pro 13 M5 256 Silver,4 140
+64,17 pro 256 orange esim,3 320
+65,17 Pro 256 Silver eSim,3 480
+66,17 pro 1TB blue esim,4 530
+67,17 pro 1TB silver eSIM,4 620
+68,17 pro 1TB blue sim+esim,4 910
+69,17 pro 1TB silver sim+sim,4 910
+70,17 Pro Max 512 silver sim+Esim,4 630
+71,17 pro max 1TB orange esim,4 870
+72,17 pro max 1TB silver esim,4 880
+73,17 pro max 1TB orange sim+Esim,5 270
+74,17 pro max 1TB blue sim+Esim,5 210
+75,17 pro max 1TB silver sim+Esim,5 240
+76,17e 256 Black Sim+eSim,2 130
+77,17e 256 White Sim +eSim,2 070
+78,17e 256 Pink Sim+eSim,2 090
+79,17 256 Lavender eSim,2 630
+80,17 256 White Sim+eSim,2 720
+81,17 256 Blue Sim+eSim,2 710
+82,17 256 Sage Sim+eSim,2 690
+83,17 512 black Esim,3 170
+84,17/512 sage ESIM,3 170
+85,17 512 lavander Esim,3 260
+86,17 512 blue ESIM,3 240
+87,17 512 black Sim+Esim,3 330
+88,17 512 blue Sim+Esim,3 350
+89,17 512 white Sim+Esim,3 400
+90,17 512 sage Sim+Esim,3 390
+91,17 512 lavender Sim+Esim,3 390
+92,16 pro max 256 desert,3 510
+93,16е 128 GB black,1 840
+94,16e 128 White,1 890
+95,16/128 GB White,2 280
+96,16/128 GB Ultramarine,2 310
+97,16 Plus 128 White,2 460
+98,16 Plus 128 black,2 460
+99,16 Plus 128 teal,2 520
+100,16 Plus 128 pink,2 520
+101,16 Plus 128 ultramarine,2 460
+102,15/128 black,2 000
+103,15 128 Blue,1 970
+104,15 Plus 128GB Blue,2 280
+105,15 Plus 128GB Green,2 100
+106,15 Plus 128GB Pink,2 100
+107,14 128GB Red,1 730
+108,14 128GB yellow,1 760
+109,📱iPhone,10
+110,13/128 GB midnight,1 660
