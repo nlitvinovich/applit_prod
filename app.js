@@ -44,6 +44,9 @@ function renderCatalog(data) {
     const card = document.createElement('div');
     card.className = 'card';
 
+    /* ВАЖНО: категория в DOM */
+    card.dataset.category = item.category;
+
     card.innerHTML = `
       <div class="card-title">${item.model}</div>
       <button class="add-to-cart">🛒</button>
@@ -103,7 +106,7 @@ document.getElementById('cart-close').addEventListener('click', () => {
   document.getElementById('cart-modal').style.display = 'none';
 });
 
-/* Кнопка заказать — отправка по нику */
+/* Кнопка заказать */
 document.getElementById('cart-order-btn').addEventListener('click', () => {
   if (cart.length === 0) {
     alert("Корзина пуста");
@@ -122,7 +125,7 @@ document.getElementById('cart-order-btn').addEventListener('click', () => {
   window.location.href = `https://t.me/ilitvinovich?text=${encoded}`;
 });
 
-/* Кнопка поделиться каталогом — нативное окно */
+/* Кнопка поделиться */
 document.getElementById('share-catalog-btn').addEventListener('click', async () => {
   const shareText =
     "Лови каталог appLit!\nОткрой в Safari → Поделиться → Добавить на экран Домой\nКороче, как мы делали с АльфаБанком :)\nhttps://applitcat.vercel.app/";
@@ -157,4 +160,25 @@ window.addEventListener('scroll', () => {
   }
 
   lastScroll = currentScroll;
+});
+
+/* ФИЛЬТРАЦИЯ ПО КАТЕГОРИЯМ */
+document.querySelectorAll('.category-buttons button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const category = btn.dataset.category;
+
+    document.querySelectorAll('.category-buttons button')
+      .forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    document.querySelectorAll('.card').forEach(card => {
+      const cardCategory = card.dataset.category;
+
+      if (category === 'all' || cardCategory === category) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
 });
