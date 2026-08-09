@@ -9,20 +9,19 @@ function updateCartCount() {
 }
 updateCartCount();
 
-/* Нормализация категорий генератора */
-function normalizeCategory(raw) {
-  if (!raw) return 'all';
+/* Определение категории по модели */
+function detectCategory(model) {
+  const m = (model || '').toLowerCase();
 
-  const c = raw.toLowerCase().trim();
+  if (m.includes('iphone')) return 'iphone';
+  if (m.includes('ipad')) return 'ipad';
+  if (m.includes('airpods')) return 'airpods';
+  if (m.includes('watch')) return 'apple watch';
 
-  if (c.includes('air') || c.includes('mac')) return 'macbook';
-  if (c.includes('iphone')) return 'iphone';
-  if (c.includes('ipad')) return 'ipad';
-  if (c.includes('pods')) return 'airpods';
-  if (c.includes('watch')) return 'apple watch';
-  if (c.includes('акс') || c.includes('access')) return 'аксессуары';
+  // MacBook только если есть "air" или "mac", но НЕ "airpods"
+  if ((m.includes('air') || m.includes('mac')) && !m.includes('airpods')) return 'macbook';
 
-  return c;
+  return 'аксессуары';
 }
 
 /* Загрузка CSV */
@@ -30,10 +29,8 @@ fetch('products.csv?' + Date.now())
   .then(res => res.text())
   .then(text => {
     const lines = text.trim().split('\n');
-
     const first = lines[0].split(',');
     const lastUpdate = first[1]?.trim();
-
     const headers = lines[1].split(',');
 
     products = lines.slice(2).map(line => {
@@ -59,9 +56,7 @@ function renderCatalog(data) {
   data.forEach(item => {
     const card = document.createElement('div');
     card.className = 'card';
-
-    /* нормализуем категорию */
-    card.dataset.category = normalizeCategory(item.category);
+    card.dataset.category = detectCategory(item.model);
 
     card.innerHTML = `
       <div class="card-title">${item.model}</div>
@@ -130,14 +125,12 @@ document.getElementById('cart-order-btn').addEventListener('click', () => {
   }
 
   const total = cart.reduce((sum, item) => sum + Number(item.price), 0);
-
   const text =
     "🛒 Заказ appLit:\n" +
     cart.map(i => `• ${i.model} — ${i.price} BYN`).join("\n") +
     `\nИтого: ${total} BYN`;
 
   const encoded = encodeURIComponent(text).replace(/%0A/g, "%0A");
-
   window.location.href = `https://t.me/ilitvinovich?text=${encoded}`;
 });
 
@@ -146,15 +139,12 @@ document.getElementById('share-catalog-btn').addEventListener('click', async () 
   const shareText =
     "Лови каталог appLit!\nОткрой в Safari → Поделиться → Добавить на экран Домой\nКороче, как мы делали с АльфаБанком :)\nhttps://applitcat.vercel.app/";
 
-  const shareData = {
-    title: "Каталог appLit",
-    text: shareText
-  };
+  const shareData = { title: "Каталог appLit", text: shareText };
 
   if (navigator.share) {
     try {
       await navigator.share(shareData);
-    } catch (err) {
+    } catch {
       alert("Не удалось открыть окно поделиться");
     }
   } else {
@@ -178,7 +168,7 @@ window.addEventListener('scroll', () => {
   lastScroll = currentScroll;
 });
 
-/* ФИЛЬТРАЦИЯ ПО КАТЕГОРИЯМ */
+/* Фильтрация по категориям */
 document.querySelectorAll('.category-buttons button').forEach(btn => {
   btn.addEventListener('click', () => {
     const category = btn.dataset.category;
@@ -189,12 +179,8 @@ document.querySelectorAll('.category-buttons button').forEach(btn => {
 
     document.querySelectorAll('.card').forEach(card => {
       const cardCategory = card.dataset.category;
-
-      if (category === 'all' || cardCategory === category) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
+      card.style.display =
+        category === 'all' || cardCategory === category ? '' : 'none';
     });
   });
 });
