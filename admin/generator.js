@@ -22,11 +22,15 @@ for (const line of lines) {
   const match = productRegex.exec(line);
   if (match) {
     const [_, name, memory, color, sim, priceRaw] = match;
+
     const model = `${name} ${memory} ${color} ${sim}`;
-    const price = Number(priceRaw).toLocaleString('ru-RU', {
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
-    });
+
+    // === Округление цены до ближайших 10 BYN ===
+    const cleanPrice = priceRaw.replace(/[^\d]/g, '');
+    const numericPrice = parseInt(cleanPrice, 10);
+    const roundedPrice = Math.round(numericPrice / 10) * 10;
+    const price = roundedPrice.toLocaleString('ru-RU');
+
     rows.push({ id, model, price });
     id++;
   }
