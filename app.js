@@ -44,7 +44,7 @@ function renderCatalog(data) {
     const card = document.createElement('div');
     card.className = 'card';
 
-    /* ВАЖНО: категория в DOM */
+    /* Категория в DOM */
     card.dataset.category = item.category;
 
     card.innerHTML = `
