@@ -1,47 +1,46 @@
-function parseTelegramToCSV(inputText) {
-  const lines = inputText.split("\n").map(l => l.trim()).filter(l => l.length > 0);
+const fs = require('fs');
+const path = require('path');
 
-  let category = "";
-  let id = 1;
-  const rows = [];
+const inputPath = path.join(__dirname, 'input.txt');
+const outputPath = path.join(__dirname, '..', 'products.csv');
 
-  const categoryRegex = /^📱\s*(.+)$/i;
-  const productRegex = /^(.+?)\s+(\d+(?:TB|GB)?)\s+(\w+)\s+([\w+]+)\s*-\s*(\d+)\s*BYN/i;
+if (!fs.existsSync(inputPath)) {
+  console.error('❌ Файл input.txt не найден');
+  process.exit(1);
+}
 
-  for (const line of lines) {
-    // Категория
-    const catMatch = line.match(categoryRegex);
-    if (catMatch) {
-      category = catMatch[1].trim();
-      continue;
-    }
+const input = fs.readFileSync(inputPath, 'utf-8');
+const lines = input.split('\n').map(l => l.trim()).filter(Boolean);
 
-    // Товар
-    const prodMatch = line.match(productRegex);
-    if (prodMatch) {
-      const name = prodMatch[1].trim();
-      const memory = prodMatch[2].trim();
-      const color = prodMatch[3].trim();
-      const sim = prodMatch[4].trim();
-      const price = prodMatch[5].trim();
+let category = '';
+let id = 1;
+const rows = [];
 
-      rows.push({
-        id: id++,
-        category,
-        name,
-        memory,
-        color,
-        sim,
-        price
-      });
-    }
+const categoryRegex = /^📱\s*(.+)$/i;
+const productRegex = /^(.+?)\s+(\d+(?:TB|GB)?)\s+(\w+)\s+([\w+]+)\s*-\s*(\d+)\s*BYN/i;
+
+for (const line of lines) {
+  const catMatch = categoryRegex.exec(line);
+  if (catMatch) {
+    category = catMatch[1].trim();
+    continue;
   }
 
-  // Формируем CSV
-  let csv = "id,category,name,memory,color,sim,price\n";
-  rows.forEach(r => {
-    csv += `${r.id},${r.category},${r.name},${r.memory},${r.color},${r.sim},${r.price}\n`;
-  });
-
-  return csv;
+  const prodMatch = productRegex.exec(line);
+  if (prodMatch) {
+    const [_, name, memory, color, sim, price] = prodMatch;
+    rows.push({ id, category, name, memory, color, sim, price });
+    id++;
+  }
 }
+
+if (rows.length === 0) {
+  console.error('❌ Нет данных для генерации CSV');
+  process.exit(1);
+}
+
+const header = 'id,category,name,memory,color,sim,price\n';
+const csv = header + rows.map(r => `${r.id},${r.category},${r.name},${r.memory},${r.color},${r.sim},${r.price}`).join('\n');
+
+fs.writeFileSync(outputPath, csv, 'utf-8');
+console.log('✔ products.csv создан');
