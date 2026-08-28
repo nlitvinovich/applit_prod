@@ -45,7 +45,16 @@ jobs:
       - name: Commit updated CSV
         run: |
           git config user.name "Mikolay"
-          git config user.email "litvinovich92@gmail.com"
+          git config user.email "ТВОЙ_EMAIL_ИЗ_GITHUB"   # замени на свой
           git add products.csv
-          git commit -m "Update products.csv" || echo "No changes to commit"
+          git commit -m "Update products.csv" || echo "No changes"
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/nlitvinovich/applit_test.git
+
+      - name: Keep‑alive commit
+        run: |
+          echo "Last keep‑alive: $(date)" > .keepalive
+          git config user.name "Mikolay"
+          git config user.email "ТВОЙ_EMAIL_ИЗ_GITHUB"   # замени на свой
+          git add .keepalive
+          git commit -m "Keep‑alive commit" || echo "No changes"
           git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/nlitvinovich/applit_test.git
