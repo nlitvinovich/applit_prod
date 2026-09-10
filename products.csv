@@ -1,11 +1,11 @@
-last_update,10.09.2026 14:35
+last_update,10.09.2026 18:34
 id,model,price,category
 93,17 pro 256 orange esim,3 640,iphone
 94,17 pro 256 blue esim,3 640,iphone
 95,17 Pro 256 Silver eSim,3 730,iphone
 96,17 pro 256 orange sim+esim,3 760,iphone
 97,17 pro 256 blue sim+esim,3 760,iphone
-98,17 pro 256 silver sim+esim,3 880,iphone
+98,17 pro 256 silver sim+esim,3 940,iphone
 99,17 pro 512 orange esim,4 270,iphone
 100,17 pro 512 blue esim,4 300,iphone
 101,17 pro 512 silver esim,4 270,iphone
@@ -21,21 +21,21 @@ id,model,price,category
 111,17 Pro Max 256 orange esim,3 910,iphone
 112,17 Pro Max 256 blue esim,3 910,iphone
 113,17 Pro Max 256 silver esim,3 920,iphone
-114,17 Pro Max 256 orange sim+Esim,4 020,iphone
-115,17 Pro Max 256 blue sim+Esim,4 030,iphone
-116,17 Pro Max 256 silver sim+Esim,4 080,iphone
-117,17 Pro Max 512 orange esim,4 360,iphone
-118,17 Pro Max 512 silver esim,4 390,iphone
-119,17 Pro Max 512 blue esim,4 380,iphone
-120,17 Pro Max 512 orange sim+Esim,4 680,iphone
-121,17 Pro Max 512 blue sim+Esim,4 700,iphone
-122,17 Pro Max 512 silver sim+Esim,4 790,iphone
-123,17 pro max 1TB orange esim,5 030,iphone
-124,17 pro max 1TB blue esim,5 000,iphone
-125,17 pro max 1TB silver esim,5 150,iphone
-126,17 pro max 1TB orange sim+Esim,5 670,iphone
-127,17 pro max 1TB blue sim+Esim,5 450,iphone
-128,17 pro max 1TB silver sim+Esim,6 090,iphone
+114,17 Pro Max 256 orange sim+Esim,4 110,iphone
+115,17 Pro Max 256 blue sim+Esim,4 260,iphone
+116,17 Pro Max 256 silver sim+Esim,4 270,iphone
+117,17 Pro Max 512 orange esim,4 640,iphone
+118,17 Pro Max 512 silver esim,4 580,iphone
+119,17 Pro Max 512 blue esim,4 640,iphone
+120,17 Pro Max 512 orange sim+Esim,4 850,iphone
+121,17 Pro Max 512 blue sim+Esim,4 910,iphone
+122,17 Pro Max 512 silver sim+Esim,4 980,iphone
+123,17 pro max 1TB orange esim,5 210,iphone
+124,17 pro max 1TB blue esim,5 230,iphone
+125,17 pro max 1TB silver esim,5 390,iphone
+126,17 pro max 1TB orange sim+Esim,6 150,iphone
+127,17 pro max 1TB blue sim+Esim,5 640,iphone
+128,17 pro max 1TB silver sim+Esim,6 210,iphone
 129,Air 256 Black eSim,2 940,iphone
 130,Air 256 White eSim,2 920,iphone
 131,Air 256 Gold eSim,2 910,iphone
