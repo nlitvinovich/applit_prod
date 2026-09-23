@@ -1,4 +1,4 @@
-last_update,23.09.2026 04:35
+last_update,23.09.2026 10:02
 id,model,price,category
 133,17 pro 256 orange esim,3 580,iphone
 134,17 pro 256 blue esim,3 610,iphone
@@ -57,9 +57,9 @@ id,model,price,category
 187,17 256 Lavender eSim,2 890,iphone
 188,17 256 Black Sim+eSim,2 970,iphone
 189,17 256 White Sim+eSim,2 940,iphone
-190,17 256 Blue Sim+e+Sim,2 940,iphone
-191,17 256E Sage Sim+eSim,2 940,iphone
-192,17 256 Lavender - Sim+eSim,2 990,iphone
+190,17 256 Blue Sim+eSim,2 940,iphone
+191,17 256 Sage Sim+eSim,2 940,iphone
+192,17 256 Lavender Sim+eSim,2 990,iphone
 193,17 512 black Esim,3 360,iphone
 194,17 512 white Esim,3 550,iphone
 195,17/512 sage ESIM,3 820,iphone
@@ -67,30 +67,31 @@ id,model,price,category
 197,17 512 blue ESIM,3 520,iphone
 198,17 512 black Sim+Esim,3 420,iphone
 199,17 512 blue Sim+Esim,3 490,iphone
-200,17 512 sage Sim+Esim,3 560,iphone
-201,17 512 lavender Sim+Esim,3 550,iphone
-202,16 pro max 256 desert,3 610,iphone
-203,16е 128 GB black,1 890,iphone
-204,16e 128 White,1 990,iphone
-205,16/128 GB White,2 420,iphone
-206,16/128 GB Pink,2 490,iphone
-207,16/128 GB Black,2 430,iphone
-208,16/128 GB Teal,2 440,iphone
-209,16/128 GB Ultramarine,2 460,iphone
-210,16/256 GB Pink,2 800,iphone
-211,16/256 GB black,2 770,iphone
-212,16 Plus 128 White,2 750,iphone
-213,16 Plus 128 black,2 800,iphone
-214,16 Plus 128 teal,2 750,iphone
-215,16 Plus 128 pink,2 750,iphone
-216,16 Plus 128 ultramarine,2 750,iphone
-217,15/128 black,2 110,iphone
-218,15 128 Blue,2 090,iphone
-219,15/256 black,2 480,iphone
-220,15 Plus 128GB Pink,2 310,iphone
-221,14 128GB Red,1 770,iphone
-222,14 128GB yellow,1 810,iphone
-223,13/128 GB midnight,1 760,iphone
+200,17 512 white Sim+Esim,3 490,iphone
+201,17 512 sage Sim+Esim,3 560,iphone
+202,17 512 lavender Sim+Esim,3 550,iphone
+203,16 pro max 256 desert,3 610,iphone
+204,16е 128 GB black,1 890,iphone
+205,16e 128 White,1 990,iphone
+206,16/128 GB White,2 420,iphone
+207,16/128 GB Pink,2 490,iphone
+208,16/128 GB Black,2 430,iphone
+209,16/128 GB Teal,2 440,iphone
+210,16/128 GB Ultramarine,2 460,iphone
+211,16/256 GB Pink,2 800,iphone
+212,16/256 GB black,2 770,iphone
+213,16 Plus 128 White,2 750,iphone
+214,16 Plus 128 black,2 800,iphone
+215,16 Plus 128 teal,2 750,iphone
+216,16 Plus 128 pink,2 750,iphone
+217,16 Plus 128 ultramarine,2 750,iphone
+218,15/128 black,2 110,iphone
+219,15 128 Blue,2 090,iphone
+220,15/256 black,2 480,iphone
+221,15 Plus 128GB Pink,2 310,iphone
+222,14 128GB Red,1 770,iphone
+223,14 128GB yellow,1 810,iphone
+224,13/128 GB midnight,1 760,iphone
 103,iPad 11 128GB WiFi blue,1 550,ipad
 104,iPad 11 128GB WiFi silver,1 600,ipad
 105,iPad 11 128GB WiFi pink,1 590,ipad
