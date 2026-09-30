@@ -1,11 +1,11 @@
-last_update,30.09.2026 15:52
+last_update,30.09.2026 21:13
 id,model,price,category
-101,17 pro 256 orange esim,3 500,iphone
-102,17 pro 256 blue esim,3 520,iphone
+101,17 pro 256 orange esim,3 520,iphone
+102,17 pro 256 blue esim,3 530,iphone
 103,17 Pro 256 Silver eSim,3 550,iphone
-104,17 pro 256 orange sim+esim,3 620,iphone
-105,17 pro 256 blue sim+esim,3 700,iphone
-106,17 pro 256 silver sim+esim,3 790,iphone
+104,17 pro 256 orange sim+esim,3 650,iphone
+105,17 pro 256 blue sim+esim,3 720,iphone
+106,17 pro 256 silver sim+esim,3 820,iphone
 107,17 pro 512 orange esim,3 990,iphone
 108,17 pro 512 blue esim,4 120,iphone
 109,17 pro 512 silver esim,4 120,iphone
@@ -25,8 +25,8 @@ id,model,price,category
 123,17 Pro Max 256 blue sim+Esim,4 030,iphone
 124,17 Pro Max 256 silver sim+Esim,4 140,iphone
 125,17 Pro Max 512 orange esim,4 260,iphone
-126,17 Pro Max 512 silver esim,4 460,iphone
-127,17 Pro Max 512 blue esim,4 320,iphone
+126,17 Pro Max 512 silver esim,4 470,iphone
+127,17 Pro Max 512 blue esim,4 350,iphone
 128,17 Pro Max 512 orange sim+Esim,4 560,iphone
 129,17 Pro Max 512 blue sim+Esim,4 710,iphone
 130,17 Pro Max 512 silver sim+Esim,4 860,iphone
@@ -49,17 +49,17 @@ id,model,price,category
 147,17e 256 pink Esim,2 240,iphone
 148,17e 256 Black Sim+eSim,2 430,iphone
 149,17e 256 White Sim +eSim,2 330,iphone
-150,17e 256 Pink Sim+eSim,2 330,iphone
-151,17 256 Black eSim,2 840,iphone
-152,17 256 White eSim,2 840,iphone
+150,17e 256 Pink Sim+eSim,2 310,iphone
+151,17 256 Black eSim,2 870,iphone
+152,17 256 White eSim,2 850,iphone
 153,17 256 Blue eSim,2 850,iphone
 154,17 256 Sage eSim,2 820,iphone
-155,17 256 Lavender eSim,2 850,iphone
-156,17 256 Black Sim+eSim,2 900,iphone
-157,17 256 White Sim+eSim,2 880,iphone
-158,17 256 Blue Sim+eSim,2 870,iphone
-159,17 256 Sage Sim+eSim,2 870,iphone
-160,17 256 Lavender Sim+eSim,2 900,iphone
+155,17 256 Lavender eSim,2 870,iphone
+156,17 256 Black Sim+eSim,2 910,iphone
+157,17 256 White Sim+eSim,2 900,iphone
+158,17 256 Blue Sim+eSim,2 880,iphone
+159,17 256 Sage Sim+eSim,2 880,iphone
+160,17 256 Lavender Sim+eSim,2 910,iphone
 161,17 512 black Esim,3 260,iphone
 162,17 512 white Esim,3 320,iphone
 163,17/512 sage ESIM,3 500,iphone
