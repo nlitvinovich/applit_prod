@@ -1,4 +1,4 @@
-last_update,10.10.2026 15:48
+last_update,10.10.2026 20:33
 id,model,price,category
 103,17 pro 256 orange esim,3 430,iphone
 104,17 pro 256 blue esim,3 480,iphone
@@ -89,93 +89,93 @@ id,model,price,category
 189,15 Plus 128GB Pink,2 320,iphone
 190,14 128GB Red,1 950,iphone
 191,13/128 GB midnight,1 760,iphone
-73,iPad 11 128GB WiFi blue,1 570,ipad
-74,iPad 11 128GB WiFi silver,1 590,ipad
+73,iPad 11 128GB WiFi blue,1 560,ipad
+74,iPad 11 128GB WiFi silver,1 580,ipad
 75,iPad 11 128GB WiFi pink,1 570,ipad
-76,iPad 11 128GB WiFi yellow,1 560,ipad
-77,iPad 11 256GB WiFi blue,1 860,ipad
+76,iPad 11 128GB WiFi yellow,1 550,ipad
+77,iPad 11 256GB WiFi blue,1 850,ipad
 78,iPad 11 256GB WiFi silver,1 930,ipad
-79,iPad 11 256GB WiFi yellow,1 910,ipad
-80,iPad 11 256GB WiFi pink,1 920,ipad
-81,iPad Air 11 (M4) 2026 128 Space Gray,2 380,ipad
-82,iPad Air 11 (M4) 2026 128 Purple,2 380,ipad
-83,iPad Air 11 (M4) 2026 128 blue,2 380,ipad
+79,iPad 11 256GB WiFi yellow,1 900,ipad
+80,iPad 11 256GB WiFi pink,1 910,ipad
+81,iPad Air 11 (M4) 2026 128 Space Gray,2 370,ipad
+82,iPad Air 11 (M4) 2026 128 Purple,2 370,ipad
+83,iPad Air 11 (M4) 2026 128 blue,2 370,ipad
 84,iPad Air 11 (M4) 2026 128 Starlight,2 430,ipad
-85,iPad Air 11 (M4) 2026 256 Space Gray,2 760,ipad
-86,iPad Air 11 (M4) 2026 256 Purple,2 750,ipad
-87,iPad Air 11 (M4) 2026 256 Blue,2 730,ipad
-88,iPad Air 11 (M4) 2026 256 Starlight,2 750,ipad
-89,iPad Air 13 (M4) 2026 128 Space Gray,2 940,ipad
-90,iPad Air 13 (M4) 2026 128 starlight,2 960,ipad
-91,iPad Air 13 (M4) 2026 128 Blue,2 910,ipad
-92,iPad Air 13 (M4) 2026 128 Purple,2 960,ipad
-93,iPad Air 13 M4 256 Starlight Wi-Fi,3 390,ipad
-94,iPad Air 13 M4 256 Blue Wi-Fi,3 370,ipad
-95,iPad Air 13 M4 256 Purple Wi-Fi,3 420,ipad
-96,iPad Air 13 M4 256 Gray Wi-Fi,3 390,ipad
-97,iPad Pro 11 M5 256 Black,3 580,ipad
-98,iPad Pro 11 M5 256 Silver,3 700,ipad
-99,iPad Pro 11 M5 512GB silver Wi-Fi,4 370,ipad
-100,iPad Pro 11 M5 512GB black Wi-Fi,4 360,ipad
-101,iPad Pro 13 M5 256 Black,4 190,ipad
-102,iPad Pro 13 M5 256 Silver,4 420,ipad
-45,MacBook Neo 13 8/256 Blush,2 620,macbook
+85,iPad Air 11 (M4) 2026 256 Space Gray,2 750,ipad
+86,iPad Air 11 (M4) 2026 256 Purple,2 740,ipad
+87,iPad Air 11 (M4) 2026 256 Blue,2 720,ipad
+88,iPad Air 11 (M4) 2026 256 Starlight,2 740,ipad
+89,iPad Air 13 (M4) 2026 128 Space Gray,2 930,ipad
+90,iPad Air 13 (M4) 2026 128 starlight,2 950,ipad
+91,iPad Air 13 (M4) 2026 128 Blue,2 900,ipad
+92,iPad Air 13 (M4) 2026 128 Purple,2 950,ipad
+93,iPad Air 13 M4 256 Starlight Wi-Fi,3 380,ipad
+94,iPad Air 13 M4 256 Blue Wi-Fi,3 360,ipad
+95,iPad Air 13 M4 256 Purple Wi-Fi,3 410,ipad
+96,iPad Air 13 M4 256 Gray Wi-Fi,3 380,ipad
+97,iPad Pro 11 M5 256 Black,3 570,ipad
+98,iPad Pro 11 M5 256 Silver,3 690,ipad
+99,iPad Pro 11 M5 512GB silver Wi-Fi,4 360,ipad
+100,iPad Pro 11 M5 512GB black Wi-Fi,4 340,ipad
+101,iPad Pro 13 M5 256 Black,4 170,ipad
+102,iPad Pro 13 M5 256 Silver,4 400,ipad
+45,MacBook Neo 13 8/256 Blush,2 610,macbook
 46,MacBook Neo 13 8/256 Indigo,2 600,macbook
-47,MacBook Neo 13 8/256 Citrus,2 530,macbook
+47,MacBook Neo 13 8/256 Citrus,2 520,macbook
 48,MacBook Neo 13 8/256 Silver,2 590,macbook
-49,MacBook Neo 13 8/512 Blush,2 990,macbook
-50,MacBook Neo 13 8/512 Indigo,2 930,macbook
-51,MacBook Neo 13 8/512 Citrus,2 760,macbook
-52,MacBook Neo 13 8/512 Silver,2 880,macbook
-53,Air 13 M5 16/512 Midnight,4 040,macbook
-54,Air 13 M5 16/512 Silver,4 130,macbook
-55,Air 13 M5 16/512 sky blue,3 990,macbook
-56,Air 13 M5 16/512 starlight,4 040,macbook
-57,Air 13 M5 16/1TB Midnight,4 930,macbook
-58,Air 13 M5 16/1TB Silver,4 930,macbook
-59,Air 13 M5 16/1TB sky blue,4 960,macbook
-60,Air 13 M5 16/1TB starlight,4 950,macbook
-61,Air 13 M5 24/1TB Midnight,5 790,macbook
-62,Air 13 M5 24/1TB Silver,5 590,macbook
-63,Air 13 M5 24/1TB sky blue,5 480,macbook
-64,Air 13 M5 24/1TB starlight,5 830,macbook
-65,Air 15 M5 2026 16/512 Midnight,4 740,macbook
-66,Air 15 M5 2026 16/512 Starlight,4 930,macbook
-67,Air 15 M5 2026 16/512 sky blue,4 840,macbook
-68,Air 15 M5 2026 16/512 silver,4 960,macbook
-69,Air 15 M5 2026 16/1TB Midnight,5 770,macbook
-70,Air 15 M5 2026 16/1TB Sky Blue,5 630,macbook
-71,Air 15 M5 2026 16/1TB Silver,5 810,macbook
-72,Air 15 M5 2026 16/1TB Starlight,5 860,macbook
+49,MacBook Neo 13 8/512 Blush,2 980,macbook
+50,MacBook Neo 13 8/512 Indigo,2 920,macbook
+51,MacBook Neo 13 8/512 Citrus,2 750,macbook
+52,MacBook Neo 13 8/512 Silver,2 870,macbook
+53,Air 13 M5 16/512 Midnight,4 020,macbook
+54,Air 13 M5 16/512 Silver,4 120,macbook
+55,Air 13 M5 16/512 sky blue,3 980,macbook
+56,Air 13 M5 16/512 starlight,4 020,macbook
+57,Air 13 M5 16/1TB Midnight,4 910,macbook
+58,Air 13 M5 16/1TB Silver,4 910,macbook
+59,Air 13 M5 16/1TB sky blue,4 950,macbook
+60,Air 13 M5 16/1TB starlight,4 930,macbook
+61,Air 13 M5 24/1TB Midnight,5 770,macbook
+62,Air 13 M5 24/1TB Silver,5 570,macbook
+63,Air 13 M5 24/1TB sky blue,5 460,macbook
+64,Air 13 M5 24/1TB starlight,5 810,macbook
+65,Air 15 M5 2026 16/512 Midnight,4 720,macbook
+66,Air 15 M5 2026 16/512 Starlight,4 910,macbook
+67,Air 15 M5 2026 16/512 sky blue,4 830,macbook
+68,Air 15 M5 2026 16/512 silver,4 940,macbook
+69,Air 15 M5 2026 16/1TB Midnight,5 750,macbook
+70,Air 15 M5 2026 16/1TB Sky Blue,5 610,macbook
+71,Air 15 M5 2026 16/1TB Silver,5 790,macbook
+72,Air 15 M5 2026 16/1TB Starlight,5 840,macbook
 1,AirPods 5,550,airpods
 2,AirPods 5 MagSafe,640,airpods
 3,AirPods 4,430,airpods
 4,AirPods 4 ANC,520,airpods
-5,AirPods Pro 3,730,airpods
+5,AirPods Pro 3,720,airpods
 6,AirPods Pro 2(USB),640,airpods
 7,AirPods Max Blue,1 590,airpods
-8,AirPods Max Purple,1 560,airpods
+8,AirPods Max Purple,1 550,airpods
 9,AirPods Max Orange,1 580,airpods
 10,AirPods Max Midnight,1 580,airpods
-11,AirPods Max starlight,1 560,airpods
-12,AirPods MAX 2 (2026) Midnight,1 630,airpods
+11,AirPods Max starlight,1 550,airpods
+12,AirPods MAX 2 (2026) Midnight,1 620,airpods
 13,AirPods MAX 2 (2026) Starlight,1 640,airpods
 14,AirPods MAX 2 (2026) Blue,1 610,airpods
 15,AirPods MAX 2 (2026) Purple,1 610,airpods
 16,AirPods MAX 2 (2026) Orange,1 610,airpods
 25,SE3 40 Midnight 2025,820,apple watch
-26,SE3 40 Starlight 2025,870,apple watch
-27,SE3 44 Midnight 2025,910,apple watch
+26,SE3 40 Starlight 2025,860,apple watch
+27,SE3 44 Midnight 2025,900,apple watch
 28,SE3 44 Starlight 2025,940,apple watch
 29,S11 42 Jet Black,1 110,apple watch
 30,S11 42 Space Gray,1 150,apple watch
-31,S11 42 Silver,1 210,apple watch
+31,S11 42 Silver,1 200,apple watch
 32,S11 42 Rose Gold,1 170,apple watch
 33,S11 46 Jet Black,1 230,apple watch
 34,S11 46 Space Gray,1 230,apple watch
 35,S11 46 Silver,1 240,apple watch
-36,S11 46 Rose Gold,1 230,apple watch
-17,Pencil 3gen usbC,340,аксессуары
+36,S11 46 Rose Gold,1 220,apple watch
+17,Pencil 3gen usbC,330,аксессуары
 18,Pencil Pro,440,аксессуары
 19,Adapter Apple 20W,80,аксессуары
 20,Magic Mouse (white),400,аксессуары
@@ -184,13 +184,13 @@ id,model,price,category
 23,AirTag 4 Шт,350,аксессуары
 24,AirTag 4Pac 2Gen,460,аксессуары
 37,S12 46 Black / Black,1 470,аксессуары
-38,S12 42 Dark Bronze / Olive,1 450,аксессуары
+38,S12 42 Dark Bronze / Olive,1 440,аксессуары
 39,S12 42 Light Gold / Sand,1 480,аксессуары
-40,S12 42 Space Gray / Navy Blue,1 460,аксессуары
+40,S12 42 Space Gray / Navy Blue,1 450,аксессуары
 41,S12 46 Black / Black,1 640,аксессуары
 42,S12 46 Dark Bronze / Olive,1 580,аксессуары
-43,S12 46 Light Gold,1 630,аксессуары
-44,S12 46 Space Gray,1 590,аксессуары
+43,S12 46 Light Gold,1 620,аксессуары
+44,S12 46 Space Gray,1 580,аксессуары
 192,18 pro 256 glacier Esim,4 230,аксессуары
 193,18 pro 256 black Esim,4 220,аксессуары
 194,18 pro 256 burgundy Esim,4 310,аксессуары
