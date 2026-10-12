@@ -1,4 +1,4 @@
-last_update,12.10.2026 20:48
+last_update,12.10.2026 20:56
 id,model,price,category
 103,17 pro 256 orange esim,3 410,iphone
 104,17 pro 256 blue esim,3 460,iphone
@@ -76,10 +76,12 @@ id,model,price,category
 176,16/128 GB Pink,2 430,iphone
 177,16/128 GB Black,2 390,iphone
 178,16/128 GB Teal,2 330,iphone
+179,16/128 GB Ultramarine,2 370,iphone
 180,16 Plus 128 White,2 620,iphone
 181,16 Plus 128 black,2 620,iphone
 182,16 Plus 128 teal,2 600,iphone
 183,16 Plus 128 pink,2 600,iphone
+184,16 Plus 128 ultramarine,2 600,iphone
 185,15/128 black,2 040,iphone
 186,15 128 Blue,2 050,iphone
 187,15/256 black,2 360,iphone
@@ -229,8 +231,6 @@ id,model,price,category
 42,S12 46 Dark Bronze / Olive,1 540,apple watch
 43,S12 46 Light Gold,1 570,apple watch
 44,S12 46 Space Gray,1 530,apple watch
-179,16/128 GB Ultramarine,2 370,apple watch
-184,16 Plus 128 ultramarine,2 600,apple watch
 17,Pencil 3gen usbC,330,аксессуары
 18,Pencil Pro,440,аксессуары
 19,Adapter Apple 20W,80,аксессуары
