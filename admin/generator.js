@@ -41,10 +41,9 @@ function classify(model) {
 
   // APPLE WATCH
   if (
-    /^s\d+/.test(m) ||
-    m.startsWith('se') ||
-    m.includes('watch') ||
-    m.includes('ultra')
+    /^s\d+\s/.test(m) ||      // S11 42...
+    /^se\d*/.test(m) ||       // SE3...
+    m.includes('apple watch')
   ) {
     return 'apple watch';
   }
@@ -66,14 +65,13 @@ function classify(model) {
 
   // IPHONE
   if (
+    /^\d+/.test(m) ||                     // 13,14,15,16,17,18...
     m.includes('iphone') ||
-    /^\d+/.test(m) ||
-    /^air\s+(128|256|512|1tb)/i.test(m)
+    /^air\s+(128|256|512|1tb)/.test(m)    // iPhone Air
   ) {
     return 'iphone';
   }
 
-  // АКСЕССУАРЫ
   return 'аксессуары';
 }
 
