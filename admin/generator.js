@@ -11,7 +11,6 @@ if (!fs.existsSync(inputPath)) {
 
 const rawInput = fs.readFileSync(inputPath, 'utf-8');
 
-// Разбиваем на строки
 const lines = rawInput
   .split('\n')
   .map(l => l.trim())
@@ -20,78 +19,65 @@ const lines = rawInput
 let id = 1;
 const rows = [];
 
-// Очистка строки от Markdown, эмодзи, мусора + нормализация Unicode
+// Очистка строки
 function cleanLine(line) {
   return line
-    .normalize('NFKC') // сохраняет буквы, включая "u" в Blue
-    .replace(/\*\*/g, '') // markdown
-    .replace(/🔥/g, '') // конкретный эмодзи
-    .replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '') // безопасное удаление эмодзи
-    .replace(/\s+/g, ' ') // лишние пробелы
+    .normalize('NFKC')
+    .replace(/\*\*/g, '')
+    .replace(/🔥/g, '')
+    .replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '')
+    .replace(/\s+/g, ' ')
     .trim();
 }
 
-// Классификация по 6 категориям
+// Классификация
 function classify(model) {
-  const m = model.toLowerCase();
+  const m = model.toLowerCase().trim();
 
-  // === MACBOOK ===
-  // Сначала отсекаем все MacBook, чтобы Air 13 / Air 15 не улетали в iPhone
-  if (
-    m.includes('macbook') ||
-    m.startsWith('air 13 m') ||       // Air 13 M4/M5
-    m.startsWith('air 15 m') ||       // Air 15 M5
-    m.includes('neo') ||              // MacBook Neo
-    (m.includes('air') && m.includes('mac')) // любые строки с Air + Mac
-  ) {
-    return 'macbook';
-  }
-
-  // === IPHONE ===
-  if (
-    m.includes('iphone') ||          // любые iPhone
-    m.startsWith('17') ||            // 17 / 17 pro / 17 pro max / 17e / 17 air
-    m.startsWith('16') ||            // 16 / 16 plus / 16e
-    m.startsWith('15') ||
-    m.startsWith('14') ||
-    m.startsWith('13/') ||
-    (
-      m.startsWith('air ') &&        // Air 256 / Air 512 → iPhone Air
-      !m.includes('ipad')            // но НЕ iPad Air
-    ) ||
-    (
-      m.match(/^air\s*\d+/) &&       // Air + число → iPhone Air
-      !m.includes('mac')             // но НЕ MacBook Air
-    )
-  ) {
-    return 'iphone';
-  }
-
-  // === IPAD ===
-  if (m.includes('ipad')) {
-    return 'ipad';
-  }
-
-  // === AIRPODS ===
+  // AIRPODS
   if (m.includes('airpods')) {
     return 'airpods';
   }
 
-  // === APPLE WATCH ===
+  // APPLE WATCH
   if (
+    /^s\d+/.test(m) ||
+    m.startsWith('se') ||
     m.includes('watch') ||
-    m.includes('se3') ||
-    m.includes('s11') ||
     m.includes('ultra')
   ) {
     return 'apple watch';
   }
 
-  // === АКСЕССУАРЫ ===
+  // IPAD
+  if (m.includes('ipad')) {
+    return 'ipad';
+  }
+
+  // MACBOOK
+  if (
+    m.includes('macbook') ||
+    m.includes('neo') ||
+    /^air\s+13\b/.test(m) ||
+    /^air\s+15\b/.test(m)
+  ) {
+    return 'macbook';
+  }
+
+  // IPHONE
+  if (
+    m.includes('iphone') ||
+    /^\d+/.test(m) ||
+    /^air\s+(128|256|512|1tb)/i.test(m)
+  ) {
+    return 'iphone';
+  }
+
+  // АКСЕССУАРЫ
   return 'аксессуары';
 }
 
-// Универсальный регекс: модель - цена BYN
+// Универсальный регекс
 const productRegex = /(.*?)\s*-\s*([\d\s]+)\s*BYN/i;
 
 for (const raw of lines) {
@@ -106,13 +92,18 @@ for (const raw of lines) {
   const numericPrice = parseInt(priceRaw, 10);
   if (isNaN(numericPrice)) continue;
 
-  // Округление до ближайших 10
   const roundedPrice = Math.round(numericPrice / 10) * 10;
   const price = roundedPrice.toLocaleString('ru-RU');
 
   const category = classify(model);
 
-  rows.push({ id, model, price, category });
+  rows.push({
+    id,
+    model,
+    price,
+    category
+  });
+
   id++;
 }
 
@@ -121,14 +112,26 @@ if (rows.length === 0) {
   process.exit(1);
 }
 
-// Сортировка по категориям
+// Сортировка категорий
 rows.sort((a, b) => {
-  const order = ['iphone', 'ipad', 'macbook', 'airpods', 'apple watch', 'аксессуары'];
-  return order.indexOf(a.category) - order.indexOf(b.category);
+  const order = [
+    'iphone',
+    'ipad',
+    'macbook',
+    'airpods',
+    'apple watch',
+    'аксессуары'
+  ];
+
+  return (
+    order.indexOf(a.category) -
+    order.indexOf(b.category)
+  );
 });
 
-// Дата Минск
+// Время обновления
 const now = new Date();
+
 const formattedDate = now.toLocaleString('ru-RU', {
   day: '2-digit',
   month: '2-digit',
@@ -138,10 +141,18 @@ const formattedDate = now.toLocaleString('ru-RU', {
   timeZone: 'Europe/Minsk'
 }).replace(',', '');
 
-// Формируем CSV
+// CSV
 let csv = `last_update,${formattedDate}\n`;
 csv += 'id,model,price,category\n';
-csv += rows.map(r => `${r.id},${r.model},${r.price},${r.category}`).join('\n');
+
+csv += rows
+  .map(r =>
+    `${r.id},${r.model},${r.price},${r.category}`
+  )
+  .join('\n');
 
 fs.writeFileSync(outputPath, csv, 'utf-8');
-console.log(`✔ products.csv создан (${rows.length} товаров, обновлено ${formattedDate})`);
+
+console.log(
+  `✔ products.csv создан (${rows.length} товаров, обновлено ${formattedDate})`
+);
