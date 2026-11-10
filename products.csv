@@ -1,7 +1,7 @@
-last_update,10.11.2026 14:58
+last_update,10.11.2026 22:20
 id,model,price,category
-103,17 pro 256 orange esim,3 440,iphone
-104,17 pro 256 blue esim,3 560,iphone
+103,17 pro 256 orange esim,3 430,iphone
+104,17 pro 256 blue esim,3 580,iphone
 105,17 Pro 256 Silver eSim,3 560,iphone
 106,17 pro 256 orange sim+esim,3 530,iphone
 107,17 pro 256 blue sim+esim,3 670,iphone
@@ -10,33 +10,33 @@ id,model,price,category
 110,17 pro 512 blue esim,4 090,iphone
 111,17 pro 512 silver esim,4 100,iphone
 112,17 pro 512 orange sim+esim,4 280,iphone
-113,17 pro 512 blue sim+esim,4 520,iphone
-114,17 pro 512 silver sim+esim,4 960,iphone
+113,17 pro 512 blue sim+esim,4 510,iphone
+114,17 pro 512 silver sim+esim,4 780,iphone
 115,17 pro 1TB orange esim,4 580,iphone
 116,17 pro 1TB blue esim,4 670,iphone
 117,17 pro 1TB silver eSIM,5 080,iphone
 118,17 pro 1TB orange sim+esim,4 960,iphone
-119,17 pro 1TB blue sim+esim,5 470,iphone
-120,17 pro 1TB silver sim+esim,5 680,iphone
+119,17 pro 1TB blue sim+esim,5 330,iphone
+120,17 pro 1TB silver sim+esim,5 620,iphone
 121,17 Pro Max 256 orange esim,3 580,iphone
 122,17 Pro Max 256 blue esim,3 670,iphone
-123,17 Pro Max 256 silver esim,3 790,iphone
+123,17 Pro Max 256 silver esim,3 770,iphone
 124,17 Pro Max 256 orange sim+Esim,3 770,iphone
 125,17 Pro Max 256 blue sim+Esim,3 890,iphone
 126,17 Pro Max 256 silver sim+Esim,4 180,iphone
-127,17 Pro Max 512 orange esim,4 150,iphone
-128,17 Pro Max 512 silver esim,4 390,iphone
+127,17 Pro Max 512 orange esim,4 130,iphone
+128,17 Pro Max 512 silver esim,4 420,iphone
 129,17 Pro Max 512 blue esim,4 240,iphone
 130,17 Pro Max 512 orange sim+Esim,4 540,iphone
-131,17 Pro Max 512 blue sim+Esim,4 660,iphone
-132,17 Pro Max 512 silver sim+Esim,5 330,iphone
-133,17 pro max 1TB orange esim,4 900,iphone
-134,17 pro max 1TB blue esim,5 020,iphone
+131,17 Pro Max 512 blue sim+Esim,4 700,iphone
+132,17 Pro Max 512 silver sim+Esim,5 200,iphone
+133,17 pro max 1TB orange esim,4 930,iphone
+134,17 pro max 1TB blue esim,4 990,iphone
 135,17 pro max 1TB silver esim,5 110,iphone
 136,17 pro max 1TB orange sim+Esim,5 800,iphone
-137,17 pro max 1TB blue sim+Esim,6 040,iphone
+137,17 pro max 1TB blue sim+Esim,6 000,iphone
 138,17 pro max 1TB silver sim+Esim,6 220,iphone
-139,Air 256 Black eSim,2 840,iphone
+139,Air 256 Black eSim,2 860,iphone
 140,Air 256 White eSim,2 800,iphone
 141,Air 256 Gold eSim,2 810,iphone
 142,Air 256 Blue eSim,2 800,iphone
@@ -45,30 +45,30 @@ id,model,price,category
 145,Air 512 blue,3 040,iphone
 146,Air 512 white,3 370,iphone
 147,17e 256 black Esim,2 310,iphone
-148,17e 256 white Esim,2 310,iphone
+148,17e 256 white Esim,2 280,iphone
 149,17e 256 pink Esim,2 310,iphone
 150,17e 256 Black Sim+eSim,2 390,iphone
 151,17e 256 White Sim +eSim,2 360,iphone
 152,17e 256 Pink Sim+eSim,2 330,iphone
 153,17 256 Black eSim,2 780,iphone
 154,17 256 White eSim,2 840,iphone
-155,17 256 Blue eSim,2 840,iphone
-156,17 256 Sage eSim,2 780,iphone
+155,17 256 Blue eSim,2 750,iphone
+156,17 256 Sage eSim,2 810,iphone
 157,17 256 Lavender eSim,2 830,iphone
 158,17 256 Black Sim+eSim,2 780,iphone
-159,17 256 White Sim+eSim,2 780,iphone
-160,17 256 Blue Sim+eSim,2 780,iphone
+159,17 256 White Sim+eSim,2 800,iphone
+160,17 256 Blue Sim+eSim,2 770,iphone
 161,17 256 Sage Sim+eSim,2 770,iphone
 162,17 256 Lavender Sim+eSim,2 800,iphone
 163,17 512 black Esim,3 220,iphone
-164,17 512 white Esim,3 220,iphone
+164,17 512 white Esim,3 250,iphone
 165,17 512 sage ESIM,3 290,iphone
 166,17 512 lavander Esim,3 470,iphone
 167,17 512 blue ESIM,3 320,iphone
-168,17 512 black Sim+Esim,3 430,iphone
+168,17 512 black Sim+Esim,3 400,iphone
 169,17 512 blue Sim+Esim,3 370,iphone
-170,17 512 white Sim+Esim,3 430,iphone
-171,17 512 sage Sim+Esim,3 430,iphone
+170,17 512 white Sim+Esim,3 410,iphone
+171,17 512 sage Sim+Esim,3 440,iphone
 172,17 512 lavender Sim+Esim,3 550,iphone
 173,16 pro max 256 desert,3 570,iphone
 174,16е 128 GB black,1 910,iphone
@@ -91,58 +91,58 @@ id,model,price,category
 191,15 Plus 128GB Pink,2 310,iphone
 192,14 128GB Red,1 970,iphone
 193,13/128 GB midnight,1 760,iphone
-194,18 pro 256 glacier Esim,4 030,iphone
-195,18 pro 256 black Esim,4 010,iphone
-196,18 pro 256 burgundy Esim,3 980,iphone
-197,18 pro 256 silver Esim,3 950,iphone
+194,18 pro 256 glacier Esim,4 000,iphone
+195,18 pro 256 black Esim,3 980,iphone
+196,18 pro 256 burgundy Esim,3 970,iphone
+197,18 pro 256 silver Esim,3 970,iphone
 198,18 Pro 256 glacier sim+esim,4 340,iphone
 199,18 Pro 256 Burgundy sim+esim,4 400,iphone
-200,18 Pro 256 silver sim+esim,4 340,iphone
-201,18 Pro 256 black sim+esim,4 370,iphone
-202,18 Pro 512 Burgundy Esim,4 690,iphone
-203,18 pro 512 black Esim,4 720,iphone
+200,18 Pro 256 silver sim+esim,4 330,iphone
+201,18 Pro 256 black sim+esim,4 420,iphone
+202,18 Pro 512 Burgundy Esim,4 660,iphone
+203,18 pro 512 black Esim,4 690,iphone
 204,18 pro 512 glacier Esim,4 720,iphone
-205,18 pro 512 silver Esim,4 940,iphone
-206,18 Pro 512 glacier sim+esim,5 170,iphone
-207,18 Pro 512 Burgundy sim+esim,5 180,iphone
-208,18 Pro 512 silver sim+esim,5 260,iphone
-209,18 Pro 512 black sim+esim,5 090,iphone
+205,18 pro 512 silver Esim,4 870,iphone
+206,18 Pro 512 glacier sim+esim,5 150,iphone
+207,18 Pro 512 Burgundy sim+esim,5 140,iphone
+208,18 Pro 512 silver sim+esim,5 320,iphone
+209,18 Pro 512 black sim+esim,5 050,iphone
 210,18 Pro 1TB Black Esim,5 850,iphone
-211,18 Pro 1TB Silver Esim,6 340,iphone
-212,18 Pro 1TB glacier Esim,6 190,iphone
-213,18 Pro 1TB Burgundy Esim,6 240,iphone
-214,18 Pro 1TB Black Sim+Esim,6 910,iphone
-215,18 Pro 1TB Silver Sim+Esim,7 060,iphone
-216,18 Pro 1TB glacier Sim+Esim,7 060,iphone
-217,18 Pro 1TB Burgundy Sim + Esim,6 760,iphone
-218,18 pro max 256 glacier Esim,4 540,iphone
-219,18 pro max 256 silver Esim,4 450,iphone
-220,18 pro max 256 black Esim,4 480,iphone
+211,18 Pro 1TB Silver Esim,6 010,iphone
+212,18 Pro 1TB glacier Esim,6 010,iphone
+213,18 Pro 1TB Burgundy Esim,6 190,iphone
+214,18 Pro 1TB Black Sim+Esim,6 760,iphone
+215,18 Pro 1TB Silver Sim+Esim,6 910,iphone
+216,18 Pro 1TB glacier Sim+Esim,6 910,iphone
+217,18 Pro 1TB Burgundy Sim + Esim,6 610,iphone
+218,18 pro max 256 glacier Esim,4 490,iphone
+219,18 pro max 256 silver Esim,4 420,iphone
+220,18 pro max 256 black Esim,4 450,iphone
 221,18 Pro Max 256 Burgundy Esim,4 480,iphone
-222,18 pro Max silver 256 Sim+Esim,4 600,iphone
-223,18 pro Max black 256 Sim+Esim,4 640,iphone
-224,18 Pro Max 256 Burgundy Sim+esim,4 880,iphone
-225,18 Pro Max 256 glacier Sim+esim,4 730,iphone
-226,18 Pro Max 512 Black Esim,5 230,iphone
-227,18 Pro Max 512 Silver Esim,5 230,iphone
+222,18 pro Max silver 256 Sim+Esim,4 660,iphone
+223,18 pro Max black 256 Sim+Esim,4 660,iphone
+224,18 Pro Max 256 Burgundy Sim+esim,4 850,iphone
+225,18 Pro Max 256 glacier Sim+esim,4 720,iphone
+226,18 Pro Max 512 Black Esim,5 240,iphone
+227,18 Pro Max 512 Silver Esim,5 270,iphone
 228,18 Pro Max 512 blue Esim,5 140,iphone
-229,18 Pro Max 512 Burgundy Esim,5 360,iphone
-230,18 pro Max 512 burgundy Sim+esim,5 660,iphone
+229,18 Pro Max 512 Burgundy Esim,5 320,iphone
+230,18 pro Max 512 burgundy Sim+esim,5 630,iphone
 231,18 pro Max 512 blue Sim + ESIM,5 530,iphone
-232,18 pro Max 512 silver Sim + ESIM,5 410,iphone
+232,18 pro Max 512 silver Sim + ESIM,5 450,iphone
 233,18 pro Max 512 Black Sim + ESIM,5 330,iphone
-234,18 pro Max 1TB Silver Esim,7 060,iphone
+234,18 pro Max 1TB Silver Esim,7 030,iphone
 235,18 Pro Max 1TB Black Esim,6 760,iphone
-236,18 Pro Max 1TB Glacier Esim,7 060,iphone
-237,18 Pro Max 1TB Burgundy Esim,6 910,iphone
+236,18 Pro Max 1TB Glacier Esim,6 970,iphone
+237,18 Pro Max 1TB Burgundy Esim,6 760,iphone
 238,18 Pro Max 1TB Black sim+e-sim,7 060,iphone
 239,18 Pro Max 1TB Silver sim+e-sim,7 210,iphone
 240,18 Pro Max 1TB Glacier sim+e-sim,7 210,iphone
-241,18 Pro Max 1TB Burgundy sim+e-sim,7 360,iphone
-242,18 Duo 256 White eSim,8 720,iphone
-243,18 Duo 256 Night Sky eSim,8 870,iphone
-244,18 Duo 512 White eSim,11 720,iphone
-245,18 Duo 512 Night Sky eSim,11 720,iphone
+241,18 Pro Max 1TB Burgundy sim+e-sim,7 210,iphone
+242,18 Duo 256 White eSim,7 660,iphone
+243,18 Duo 256 Night Sky eSim,7 660,iphone
+244,18 Duo 512 White eSim,8 560,iphone
+245,18 Duo 512 Night Sky eSim,8 560,iphone
 73,iPad 11 128GB WiFi blue,1 550,ipad
 74,iPad 11 128GB WiFi silver,1 570,ipad
 75,iPad 11 128GB WiFi pink,1 550,ipad
