@@ -179,45 +179,43 @@ body {
   color: #4b5e80;
 }
 
-/* Кнопка корзины — лёгкая синяя таблетка */
+/* Кнопка корзины — светлая пастельно-голубая таблетка */
 .add-to-cart {
   position: absolute;
   right: 20px;
-  top: 20px;
-  min-width: 42px;
-  height: 38px;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 46px;
+  height: 40px;
   padding: 0 14px;
-  font-size: 15px;
-  font-weight: 500;
-  background: #0071e3;
-  color: #ffffff;
-  border: none;
+  font-size: 17px;
+  background: #eaf3ff;
+  color: #0071e3;
+  border: 1px solid rgba(0, 113, 227, 0.18);
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.22);
-  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 113, 227, 0.08);
+  transition: background 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
 }
 
 .add-to-cart:hover {
-  background: #005bb5;
-  box-shadow: 0 6px 16px rgba(0, 113, 227, 0.3);
+  background: #dcebff;
+  border-color: rgba(0, 113, 227, 0.35);
 }
 
 .add-to-cart:active {
-  transform: scale(0.93);
+  transform: translateY(-50%) scale(0.93);
 }
 
 @media (hover: none) {
   .add-to-cart:hover {
-    background: #0071e3;
-    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.22);
+    background: #eaf3ff;
+    border-color: rgba(0, 113, 227, 0.18);
   }
 }
-
-
 /* Цена — ярко-синий акцент */
 .card-price {
   font-size: 18px;
